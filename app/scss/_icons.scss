@@ -1,0 +1,15 @@
+.icon {
+  display: inline-block;
+
+  &.smile {
+    background: url(img/icons/smile.png)no-repeat center/cover;
+    width: 21px;
+    height: 21px;
+  }
+
+  &-example-svg-icon {
+    width: 30px;
+    height: 30px;
+    fill: red;
+  }
+}

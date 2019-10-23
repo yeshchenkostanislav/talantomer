@@ -1,0 +1,106 @@
+.creativeness {
+  background: #fff url(img/creativeness-bg.png)no-repeat center;
+  padding: 100px 0 50px 0;
+  height: 100vh;
+
+  @media(max-width: 992px) {
+    height: 100%;
+    padding: 100px 0 0px 0;
+  }
+
+  @media(max-width: 576px) {}
+
+  &__wrap {
+    justify-content: center;
+
+    @media(max-width: 992px) {
+      width: 415px;
+    }
+
+    @media(max-width: 576px) {
+      width: 300px;
+    }
+  }
+
+  &__br {
+    @media(max-width: 576px) {
+      display: none;
+    }
+  }
+
+  &__list {
+    max-width: 415px;
+    position: relative;
+
+    @media(max-width: 992px) {
+      margin: 0 auto;
+    }
+
+    @media(max-width: 576px) {
+      max-width: 300px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url(img/boy-creativeness.png)no-repeat center/cover;
+      width: 252px;
+      height: 557px;
+      top: -58px;
+      right: -313px;
+
+      @media(max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url(img/bulb.png)no-repeat center/cover;
+      width: 89px;
+      height: 97px;
+      top: -75px;
+      left: -71px;
+
+      @media(max-width: 576px) {
+        width: 63px;
+        height: 67px;
+        left: 0;
+      }
+    }
+
+  }
+
+  &__text {
+    margin: 15px 0 0 0;
+  }
+
+  &__list-item {
+    margin: 40px 0 0 0;
+  }
+
+  &__btn {
+    width: 150px;
+    margin: 120px 30px 0 auto;
+    font-family: "AG Futura Bold";
+
+    @media(max-width: 992px) {
+      margin: 120px auto 0 auto;
+    }
+
+    @media(max-width: 576px) {
+      margin: 40px auto 0 auto;
+    }
+  }
+
+  &__smile {
+    margin: 0 0 -6px 5px;
+  }
+}

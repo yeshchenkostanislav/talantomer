@@ -1,0 +1,39 @@
+.visual-creativity {
+  $root: &;
+
+  &__input {
+    display: none;
+  }
+
+
+  &__label {
+    &::before {
+      content: "\2713";
+      color: transparent;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      margin: -2px 5px 0 0;
+      margin-right: 9px;
+      text-align: center;
+      vertical-align: middle;
+      transition: color ease .3s;
+      width: 14px;
+      height: 14px;
+      border-radius: 2px;
+      border: 1px solid #c7c7c7;
+      background-color: #f5f5f5;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked {
+      >.visual-creativity__label::before {
+        color: #2d2d2d;
+      }
+    }
+  }
+
+}

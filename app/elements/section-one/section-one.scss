@@ -1,0 +1,116 @@
+.section-one {
+  background: #48195c url(img/section-one-bg.png)no-repeat center;
+  height: 100vh;
+
+  @media(max-width: 992px) {
+    height: 100%;
+    padding: 300px 0;
+  }
+
+  @media(max-width: 576px) {
+    background-position: 62% 0;
+    padding: 300px 0 400px 0;
+
+  }
+
+  &__br {
+    @media(max-width: 576px) {
+      display: none;
+    }
+
+  }
+
+  &__wrap {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__text {
+    position: relative;
+    transform: translate(-126px, -30px) rotate(-8deg);
+
+    @media(max-width: 768px) {
+      transform: translate(-110px, -30px) rotate(-8deg);
+    }
+
+    @media(max-width: 576px) {
+      transform: translate(-33px, -62px) rotate(-8deg);
+    }
+
+    &:after {
+      content: '';
+      background: url(img/boy-two.png)no-repeat center/cover;
+      display: block;
+      position: absolute;
+      right: -500px;
+      top: -100px;
+      width: 272px;
+      height: 623px;
+      transform: rotate(8deg);
+
+      @media(max-width: 992px) {
+        width: 170px;
+        height: 400px;
+        right: -209px;
+        top: 64px;
+      }
+
+      @media(max-width: 576px) {
+        right: -76px;
+        top: 137px;
+      }
+    }
+
+  }
+
+  &__title {
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+    color: #fafafa;
+    font-family: "AG Futura Bold";
+    font-size: 33px;
+    text-transform: uppercase;
+
+    @media(max-width: 576px) {
+      text-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__subtitle {
+    text-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+    color: #48195c;
+    font-family: "FuturaFuturisC";
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 50px 0 0 0;
+    padding: 0 0 0 20px;
+
+    @media(max-width: 576px) {
+      max-width: 185px;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+  }
+
+  &__text-small {
+    @media(max-width: 576px) {
+      font-size: 17px;
+    }
+  }
+
+  &__btn {
+    width: 250px;
+    position: absolute;
+    transform: rotate(8deg);
+    bottom: -295px;
+    left: 158px;
+    z-index: 5;
+
+    @media(max-width: 576px) {
+      left: -60px;
+      bottom: -382px;
+    }
+  }
+}

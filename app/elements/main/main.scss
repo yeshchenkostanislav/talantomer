@@ -1,0 +1,134 @@
+.main {
+  background: #ffd539 url(img/main-bg-two.png)no-repeat center;
+  height: 100vh;
+
+  @media(max-width: 992px) {
+    background: #ffd539 url(img/main-bg.png)no-repeat center;
+    height: 100%;
+    padding: 300px 0;
+  }
+
+  @media(max-width: 576px) {}
+
+  &__br {
+    &:nth-child(2) {
+      @media(max-width: 576px) {
+        display: none;
+      }
+    }
+
+  }
+
+  &__wrap {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__arrow {
+    color: #ffb300;
+  }
+
+  &__title {}
+
+  &__title-list {
+    width: 212px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    color: $color-title;
+    font-family: "FuturaFuturisC";
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: right;
+    margin: 3px -172px 0 0;
+    position: relative;
+
+    @media(max-width: 576px) {
+      font-size: 15px;
+      margin: 3px -66px 0 0;
+    }
+
+    &:before {
+      content: 'ИЗМЕРЬТЕ ТАЛАНТ ВАШЕГО РЕБЁНКА';
+      position: absolute;
+      width: 300px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 300px;
+      font-family: 'FuturaFuturisC';
+      text-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+      color: #fafafa;
+      font-size: 29px;
+      line-height: 29px;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+      transform: rotate(-15deg);
+      top: -120px;
+      left: -164px;
+
+      @media(max-width: 576px) {
+        font-size: 25px;
+        top: -121px;
+        left: -100px;
+      }
+    }
+  }
+
+  &__list {
+    margin: 11px -20px 0 0;
+    max-width: 370px;
+    position: relative;
+
+    @media(max-width: 576px) {
+      max-width: 279px;
+      margin: 11px 0 0 0;
+    }
+
+    /*   &:before {
+      content: '';
+      position: absolute;
+      background: url(img/girl.png)no-repeat center/cover;
+      display: block;
+      width: 313px;
+      height: 472px;
+      top: -144px;
+      left: -324px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: url(img/boy.png)no-repeat center/cover;
+      display: block;
+      width: 310px;
+      height: 517px;
+      top: -211px;
+      right: -280px;
+    } */
+  }
+
+  &__list-item {
+    color: #ffffff;
+    font-family: "Futura PT - Book";
+    font-size: 14px;
+    line-height: 15px;
+
+    &:not(:first-child) {
+      margin: 15px 0 0 0;
+
+      @media(max-width: 576px) {
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: -225px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

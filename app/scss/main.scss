@@ -1,0 +1,113 @@
+@import "_fonts";
+@import "_mixins";
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $base-font;
+  font-size: $base-font-size;
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  font-family: $base-font;
+  outline: none;
+  transition: $t-time;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input {
+  outline: none;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 780px;
+}
+
+.title {
+  color: $bg-btn;
+  font-family: "'AG_Futura Bold'";
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.item-title {
+  font-size: 16px;
+  color: #454545;
+  font-family: 'FuturaFuturisC';
+}
+
+.text {
+  font-size: 14px;
+  color: #454545;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-btn-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  background-color: #ee2989;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-family: "AG_Futura Bold";
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 0 23px;
+
+  &:hover {
+    cursor: pointer;
+    background: darken(#ee2989, 10%);
+  }
+}
+
+@import "icons";
+
+//app/elements/index-page
+@import "../elements/index-page/index-page";
+@import "../elements/main/main";
+
+//app/elements/index-page
+@import "../elements/section-one/section-one";
+
+//app/elements/creativeness
+@import "../elements/creativeness/creativeness";
+
+//app/elements/visual-creativity
+@import "../elements/visual-creativity/visual-creativity";
