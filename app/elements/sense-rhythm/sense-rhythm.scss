@@ -1,0 +1,210 @@
+.sense-rhythm {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  @media(max-width: 992px) {
+    height: 100%;
+  }
+
+  &__drum-small {
+    margin: 0 0 -9px 0;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      background: url('img/sense-rhythm-icon.png')no-repeat center/cover;
+      z-index: -1;
+      display: block;
+      position: absolute;
+      width: 81px;
+      height: 84px;
+      left: -75px;
+      bottom: 16px;
+
+      @media(max-width: 992px) {
+        left: -10px;
+        bottom: 28px;
+        width: 57px;
+        height: 58px;
+      }
+    }
+  }
+
+  &__wrap {
+    max-width: 980px;
+    width: 100%;
+    background: url('img/sense-rhythm-bg.png')no-repeat center/cover;
+    align-items: flex-start;
+    padding: 70px 0 40px 130px;
+
+    @media(max-width: 992px) {
+      padding: 70px 0 40px 40px;
+    }
+
+    @media(max-width: 576px) {
+      padding: 20px 20px 40px 20px;
+    }
+  }
+
+  &__contant {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media(max-width: 576px) {
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    margin: 50px 0 0 0;
+
+    @media(max-width: 768px) {
+      margin: 40px 0 0 0;
+    }
+  }
+
+  &__info {
+    max-width: 430px;
+    padding: 20px 0 0 0;
+    z-index: 1;
+
+    @media(max-width: 992px) {
+      max-width: 400px;
+    }
+
+    @media(max-width: 576px) {
+      max-width: 280px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @media(max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    margin: 20px 0 0 0;
+    font-family: 'Futura PT Book';
+    font-weight: 600;
+  }
+
+  &__list-item {
+    &:not(:first-child) {
+      margin: 40px 0 0 0;
+    }
+  }
+
+  &__play-example {
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 0 0 0;
+
+    @media(max-width: 576px) {
+      flex-direction: column;
+    }
+  }
+
+  &__text-play {
+    &_pink {
+      color: #ee2989;
+    }
+  }
+
+  &__play-example-img {
+    margin: 0 75px 0 0;
+
+    @media(max-width: 576px) {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+  }
+
+  &__play-example-img-text {
+    color: #ee2989;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0 0 0;
+
+    @media(max-width: 576px) {
+      margin: 0 0 0 5px;
+    }
+  }
+
+  &__notes-example {
+    text-align: center;
+
+    @media(max-width: 576px) {
+      margin: 25px auto 0 auto;
+    }
+  }
+
+  &__notes-example-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+  }
+
+  &__notes-example-title {
+    color: #454545;
+    font-family: "AG Futura Bold";
+    font-size: 13px;
+
+  }
+
+  &__notes-example-list-item {
+    &:not(:last-child) {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__play {
+    @media(max-width: 576px) {
+      width: 98px;
+      height: 109px;
+
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: 150px;
+    margin: 50px 0 0 0;
+    transform: translateX(100px);
+
+    @media(max-width: 768px) {
+      transform: translateX(0px);
+      margin: 50px auto 0 auto;
+    }
+  }
+
+  &__lose-beat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f02e8d;
+    margin: 10px auto 0 auto;
+
+    &:hover {
+      background: darken(#f02e8d, 10%);
+    }
+  }
+}

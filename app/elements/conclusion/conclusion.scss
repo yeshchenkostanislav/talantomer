@@ -1,0 +1,125 @@
+.conclusion {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #ffe03c;
+  position: relative;
+
+  @media(max-width: 992px) {
+    height: 100%;
+    align-items: flex-start;
+    padding-bottom: 220px;
+  }
+
+  @media(max-width: 576px) {
+    padding-bottom: 330px;
+  }
+
+  &__wrap {
+    max-width: 980px;
+    min-height: 700px;
+    width: 100%;
+    background: #ffe03c url(img/conclusion-bg.png)no-repeat center;
+    position: relative;
+
+    @media(max-width: 576px) {
+      background: #ffe03c url(img/conclusion-bg-small.png)no-repeat center;
+      min-height: 380px;
+      padding: 0 15px;
+    }
+  }
+
+  &__text {
+    max-width: 358px;
+    width: 100%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    border: 2px solid #ffd600;
+    background-color: #ffffff;
+    padding: 10px;
+    color: #ffd600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #454545;
+    letter-spacing: 0.32px;
+    text-align: center;
+    position: absolute;
+    right: 15px;
+    bottom: 70px;
+
+    @media(max-width: 992px) {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: -130px;
+    }
+
+    @media(max-width: 576px) {
+      bottom: -245px;
+      max-width: 300px;
+      padding: 3px;
+    }
+  }
+
+  &__btn {
+    z-index: 3;
+    position: absolute;
+    width: 400px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media(max-width: 992px) {
+      bottom: -190px;
+      width: 250px;
+      height: 50px;
+      text-align: center;
+    }
+
+    @media(max-width: 576px) {
+      bottom: -305px;
+    }
+  }
+
+  &__num {
+    width: 130px;
+    color: #006bff;
+    font-family: "AG Futura Bold";
+    font-size: 60px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    @media(max-width: 576px) {
+      font-size: 39px;
+      bottom: 110px;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 48%;
+    top: 40%;
+    transform: rotate(50deg) translate(-50%, -50%);
+    transform-origin: 75px 75px;
+
+    @media(max-width: 576px) {
+      display: none;
+    }
+  }
+
+  &__arrow_small {
+    display: none;
+    position: absolute;
+    left: 48%;
+    top: 40%;
+    transform: rotate(50deg) translate(-50%, -50%);
+    transform-origin: 75px 75px;
+
+    @media(max-width: 576px) {
+      display: block;
+    }
+  }
+}

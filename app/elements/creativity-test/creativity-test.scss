@@ -1,0 +1,168 @@
+.creativity-test {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  @media(max-width: 992px) {
+    height: 100%;
+  }
+
+  &__wrap {
+    max-width: 980px;
+    width: 100%;
+    background: #fff url(img/ear-music-bg.png)no-repeat center/cover;
+    padding: 50px 0 150px 30px;
+    position: relative;
+
+    @media(max-width: 768px) {
+      padding: 50px 0 50px 30px;
+    }
+
+    @media(max-width: 576px) {
+      padding: 50px 10px 50px 10px;
+    }
+  }
+
+  &__play-text {
+    color: #ee2989;
+    font-weight: 700;
+    font-size: 16px;
+
+    @media(max-width: 576px) {
+      margin: 0 0 0 5px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+
+    @media(max-width: 576px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+
+  &__play {
+    margin: 0 15px 0 0;
+
+    @media(max-width: 576px) {
+      margin: 30px 0 0 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icons-list {
+    width: 415px;
+    height: 53px;
+    background: url('img/creativity-test-icons.png')no-repeat center/cover;
+    margin: -25px 0 0 0;
+
+    @media(max-width: 576px) {
+      width: 295px;
+      height: 38px;
+      margin: 0;
+    }
+  }
+
+  &__question-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 535px;
+    width: 100%;
+    margin: 55px 0 0 0;
+
+    @media(max-width: 576px) {
+      max-width: 320px;
+    }
+  }
+
+  &__question-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &:not(:first-child) {
+      margin: 27px 0 0 0;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: flex-start;
+    font-family: "Futura PT Book";
+    font-size: 16px;
+    font-weight: 600;
+    color: #454545;
+
+    @media(max-width: 576px) {
+      max-width: 230px;
+    }
+  }
+
+  &__num {
+    margin: 0 3px 0 0;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid #91b9e6;
+    font-family: "AG Futura Bold";
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #91bde6;
+
+    @media(max-width: 576px) {
+      &:not(:first-child) {
+        margin: 3px 0 0 0;
+      }
+    }
+  }
+
+  &__answer-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 125px;
+    width: 100%;
+
+    @media(max-width: 576px) {
+      flex-direction: column;
+      max-width: 60px;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+
+    &:checked {
+      +.creativity-test__label {
+        background: #91b9e6;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+
+    @media(max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    margin: 50px auto 0 auto;
+  }
+}

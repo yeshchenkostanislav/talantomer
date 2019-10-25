@@ -1,0 +1,194 @@
+.ear-music {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  @media(max-width: 992px) {
+    height: 100%;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      background: url('img/note.png')no-repeat center/cover;
+      z-index: -1;
+      display: block;
+      position: absolute;
+      width: 81px;
+      height: 84px;
+      left: -75px;
+      bottom: 16px;
+
+      @media(max-width: 768px) {
+        left: -10px;
+        bottom: 28px;
+        width: 57px;
+        height: 58px;
+      }
+    }
+  }
+
+  &__wrap {
+    max-width: 980px;
+    width: 100%;
+    background: url('img/ear-music-bg.png')no-repeat center/cover;
+    align-items: flex-start;
+    padding: 130px 80px 40px 130px;
+
+    @media(max-width: 992px) {
+      padding: 130px 20px 40px 20px;
+    }
+  }
+
+  &__contant {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__list {
+    margin: 50px 0 0 0;
+
+    @media(max-width: 768px) {
+      margin: 40px 0 0 0;
+    }
+  }
+
+  &__info {
+    max-width: 495px;
+    padding: 20px 0 0 0;
+  }
+
+  &__img {
+    @media(max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    margin: 20px 0 0 0;
+    font-family: 'Futura PT Book';
+    font-weight: 600;
+  }
+
+  &__list-item {
+    &:not(:first-child) {
+      margin: 40px 0 0 0;
+    }
+  }
+
+  &__play-example {
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 0 0 0;
+
+    @media(max-width: 576px) {
+      flex-direction: column;
+    }
+  }
+
+  &__text-play {
+    &_pink {
+      color: #ee2989;
+    }
+  }
+
+  &__play-example-img {
+    margin: 0 75px 0 0;
+
+    @media(max-width: 576px) {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+  }
+
+  &__play-example-img-text {
+    color: #ee2989;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0 0 0;
+
+    @media(max-width: 576px) {
+      margin: 0 0 0 5px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #91b9e6;
+    color: #454545;
+    font-family: "AG Futura Bold";
+    font-size: 20px;
+    border-radius: 50%;
+  }
+
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+
+    &:checked {
+      +.ear-music__label {
+        background: #91b9e6;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__notes-example {
+    text-align: center;
+
+    @media(max-width: 576px) {
+      margin: 25px auto 0 auto;
+    }
+  }
+
+  &__notes-example-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+  }
+
+  &__notes-example-title {
+    color: #454545;
+    font-family: "AG Futura Bold";
+    font-size: 13px;
+
+  }
+
+  &__notes-example-list-item {
+    &:not(:last-child) {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__play {
+    @media(max-width: 576px) {
+      width: 98px;
+      height: 109px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: 150px;
+    margin: 50px 0 0 0;
+    transform: translateX(100px);
+
+    @media(max-width: 768px) {
+      transform: translateX(0px);
+      margin: 50px auto 0 auto;
+    }
+  }
+}

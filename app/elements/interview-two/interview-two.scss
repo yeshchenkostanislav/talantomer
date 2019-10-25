@@ -1,0 +1,103 @@
+.interview-two {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  @media(max-width: 992px) {
+    height: 100%;
+  }
+
+  &__wrap {
+    max-width: 980px;
+    width: 100%;
+    background: #fff url(img/ear-music-bg.png)no-repeat center/cover;
+    padding: 50px 90px 40px 50px;
+    position: relative;
+
+    @media(max-width: 768px) {
+      padding: 25px 10px 25px 10px;
+    }
+
+    @media(max-width: 576px) {
+      padding: 50px 10px 50px 10px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    width: 500px;
+
+    @media(max-width: 576px) {
+      width: 214px;
+    }
+  }
+
+  &__question-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 575px;
+    width: 100%;
+
+    @media(max-width: 576px) {
+      max-width: 320px;
+    }
+  }
+
+  &__question-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &:not(:first-child) {
+      margin: 27px 0 0 0;
+    }
+  }
+
+  &__text {
+    font-family: "Futura PT Book";
+    font-size: 16px;
+    max-width: 476 px;
+    font-weight: 500;
+    color: #454545;
+
+    @media(max-width: 576px) {
+      max-width: 230px;
+    }
+  }
+
+  &__num {
+    margin: 0 3px 0 0;
+  }
+
+
+  &__answer {
+    width: 60px;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid #91b9e6;
+    text-align: center;
+  }
+
+  &__img {
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+
+    @media(max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    width: 256px;
+    height: 35px;
+    margin: 70px 70px 0 auto;
+
+    @media(max-width: 768px) {
+      margin: 50px auto 0 auto;
+    }
+  }
+}

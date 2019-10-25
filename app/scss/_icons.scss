@@ -7,6 +7,25 @@
     height: 21px;
   }
 
+  &.play {
+    background: url(img/icons/play.png)no-repeat center/cover;
+    width: 98px;
+    height: 109px;
+  }
+
+  //app/elements/sense-rhythm
+  &.drum-small {
+    background: url(img/icons/drum-small.png)no-repeat center/cover;
+    width: 24px;
+    height: 24px;
+  }
+
+  &.drum {
+    background: url(img/icons/drum.png)no-repeat center/cover;
+    width: 30px;
+    height: 33px;
+  }
+
   &-example-svg-icon {
     width: 30px;
     height: 30px;

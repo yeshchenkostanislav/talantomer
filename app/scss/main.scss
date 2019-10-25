@@ -55,10 +55,14 @@ input {
 
 .title {
   color: $bg-btn;
-  font-family: "'AG_Futura Bold'";
+  font-family: "'AG Futura Bold'";
   font-size: 25px;
   font-weight: bold;
   text-transform: uppercase;
+
+  @media(max-width: 576px) {
+    font-size: 20px;
+  }
 }
 
 .item-title {
@@ -86,7 +90,7 @@ input {
   background-color: #ee2989;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
   color: #ffffff;
-  font-family: "AG_Futura Bold";
+  font-family: "AG Futura Bold";
   font-size: 17px;
   text-transform: uppercase;
   padding: 0 23px;
@@ -111,3 +115,39 @@ input {
 
 //app/elements/visual-creativity
 @import "../elements/visual-creativity/visual-creativity";
+
+//app/elements/ear-music
+@import "../elements/ear-music/ear-music";
+
+//app/elements/music-test
+@import "../elements/music-test/music-test";
+
+//app/elements/music-test
+@import "../elements/sense-rhythm/sense-rhythm";
+
+//app/elements/music-test-drum
+@import "../elements/music-test-drum/music-test-drum";
+
+//app/elements/underst-emotions
+@import "../elements/underst-emotions/underst-emotions";
+
+//app/elements/emotion-test
+@import "../elements/emotion-test/emotion-test";
+
+//app/elements/creative-energy
+@import "../elements/creative-energy/creative-energy";
+
+//app/elements/creativity-test
+@import "../elements/creativity-test/creativity-test";
+
+//app/elements/section-two
+@import "../elements/section-two/section-two";
+
+//app/elements/interview
+@import "../elements/interview/interview";
+
+//app/elements/interview-two
+@import "../elements/interview-two/interview-two";
+
+//app/elements/conclusion
+@import "../elements/conclusion/conclusion";

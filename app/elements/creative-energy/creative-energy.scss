@@ -1,0 +1,91 @@
+.creative-energy {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  @media(max-width: 992px) {
+    height: 100%;
+  }
+
+  &__wrap {
+    max-width: 980px;
+    width: 100%;
+    background: #fff url(img/creative-energy-bg.png)no-repeat center;
+    padding: 90px 0 40px 120px;
+    position: relative;
+
+    @media(max-width: 576px) {
+      padding: 90px 20px 50px 20px;
+    }
+  }
+
+  &__list {
+    max-width: 415px;
+
+    @media(max-width: 992px) {}
+
+    @media(max-width: 576px) {
+      margin: 0 auto;
+      max-width: 300px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @media(max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    @media(max-width: 576px) {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url(img/creative-energy-icon.png)no-repeat center/cover;
+      width: 76px;
+      height: 83px;
+      top: -75px;
+      left: -71px;
+
+      @media(max-width: 576px) {
+        width: 54px;
+        height: 59px;
+        left: 0;
+        top: -60px;
+      }
+    }
+  }
+
+  &__text {
+    margin: 15px 0 0 0;
+  }
+
+  &__list-item {
+    margin: 40px 0 0 0;
+  }
+
+  &__btn {
+    width: 150px;
+    margin: 120px 30px 0 auto;
+    font-family: "AG Futura Bold";
+
+    @media(max-width: 992px) {
+      margin: 120px auto 0 auto;
+    }
+
+    @media(max-width: 576px) {
+      margin: 40px auto 0 auto;
+    }
+  }
+}

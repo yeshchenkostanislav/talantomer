@@ -1,0 +1,167 @@
+.music-test {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  @media(max-width: 992px) {
+    height: 100%;
+  }
+
+  &__wrap {
+    max-width: 980px;
+    width: 100%;
+    background: url('img/ear-music-bg.png')no-repeat center/cover;
+    align-items: flex-start;
+    padding: 50px;
+    position: relative;
+
+    @media(max-width: 576px) {
+      padding: 50px 20px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+
+    @media(max-width: 900px) {
+      display: none;
+    }
+  }
+
+  &__list {
+    @media(max-width: 576px) {
+      width: 100%;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+
+    @media(max-width: 576px) {
+      flex-direction: column;
+    }
+
+    &:not(:first-child) {
+      margin: 55px 0 0 0;
+    }
+  }
+
+  &__play-example-img {
+    margin: 0 35px 0 0;
+
+    @media(max-width: 576px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__play-example-box {
+    display: flex;
+    align-items: center;
+
+    @media(max-width: 576px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+
+  &__play-example-text {
+    color: #ee2989;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+
+    @media(max-width: 576px) {
+      margin: 14px 0 0 -40px;
+    }
+  }
+
+  &__play-example-img-text {
+    color: #ee2989;
+    font-family: "FuturaFuturisC";
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 0 15px;
+
+    @media(max-width: 576px) {
+      margin: 0 0 0 33px;
+    }
+
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #91b9e6;
+    color: #454545;
+    font-family: "AG Futura Bold";
+    font-size: 20px;
+    border-radius: 50%;
+  }
+
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+
+    &:checked {
+      +.music-test__label {
+        background: #91b9e6;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__notes-example {
+    text-align: center;
+
+    @media(max-width: 576px) {
+      margin: 25px auto 0 auto;
+    }
+  }
+
+  &__notes-example-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+  }
+
+  &__notes-example-title {
+    color: #454545;
+    font-family: "AG Futura Bold";
+    font-size: 13px;
+
+  }
+
+  &__notes-example-list-item {
+    &:not(:last-child) {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__play {
+    @media(max-width: 576px) {
+      width: 98px;
+      height: 109px;
+
+    }
+  }
+
+  &__btn {
+    margin: 40px auto 0 auto;
+    width: 150px;
+    height: 36px;
+  }
+}
