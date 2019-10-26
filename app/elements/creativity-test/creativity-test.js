@@ -37,7 +37,8 @@ $('.creativity-test__question-list-item_five .creativity-test__checkbox').click(
 
 let ArrTE = [];
 let TZsum = 0;
-let TZ = TZsum * 10 / 5; // это переменная ТЗ
+let TZ = TZsum * 10 / 5;
+let TE = TZ; // это переменная ТЗ
 
 let ArrAC2 = [];
 let ACsum2 = 0;
