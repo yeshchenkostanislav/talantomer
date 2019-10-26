@@ -16,7 +16,7 @@
     position: relative;
 
     @media(max-width: 576px) {
-      padding: 80px 20px 245px 20px;
+      padding: 80px 20px 70px 20px;
     }
   }
 
@@ -62,6 +62,10 @@
 
   &__play-example-img {
     margin: 0 35px 0 0;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     @media(max-width: 576px) {
       margin: 0 20px 0 0;
@@ -162,6 +166,7 @@
 
     &:hover {
       background: darken(#f02e8d, 10%);
+      cursor: pointer;
     }
   }
 }

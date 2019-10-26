@@ -57,6 +57,10 @@
   &__play-example-img {
     margin: 0 35px 0 0;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @media(max-width: 576px) {
       display: flex;
       align-items: center;
@@ -109,6 +113,10 @@
     font-family: "AG Futura Bold";
     font-size: 20px;
     border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__checkbox {

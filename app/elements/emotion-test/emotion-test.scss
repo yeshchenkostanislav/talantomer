@@ -94,6 +94,10 @@
     font-size: 13px;
     color: #454545;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @media(max-width: 576px) {
       width: 150px;
     }

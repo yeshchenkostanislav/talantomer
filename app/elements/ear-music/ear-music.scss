@@ -22,7 +22,7 @@
       left: -75px;
       bottom: 16px;
 
-      @media(max-width: 768px) {
+      @media(max-width:992px) {
         left: -10px;
         bottom: 28px;
         width: 57px;
@@ -40,6 +40,10 @@
 
     @media(max-width: 992px) {
       padding: 130px 20px 40px 20px;
+    }
+
+    @media(max-width: 576px) {
+      padding: 70px 20px 70px 20px;
     }
   }
 
@@ -102,6 +106,10 @@
   &__play-example-img {
     margin: 0 75px 0 0;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @media(max-width: 576px) {
       display: flex;
       align-items: center;
@@ -131,6 +139,10 @@
     font-family: "AG Futura Bold";
     font-size: 20px;
     border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__checkbox {

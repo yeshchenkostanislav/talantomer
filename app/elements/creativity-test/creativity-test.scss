@@ -19,7 +19,7 @@
     }
 
     @media(max-width: 576px) {
-      padding: 50px 10px 50px 10px;
+      padding: 50px 10px 70px 10px;
     }
   }
 
@@ -119,6 +119,10 @@
     font-size: 13px;
     text-transform: uppercase;
     color: #91bde6;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     @media(max-width: 576px) {
       &:not(:first-child) {

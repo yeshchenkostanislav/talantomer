@@ -1,24 +1,25 @@
 .creativeness {
-  background: #fff url(img/creativeness-bg.png)no-repeat center;
-  padding: 100px 0 50px 0;
   height: 100vh;
+  align-items: center;
+  justify-content: center;
 
   @media(max-width: 992px) {
     height: 100%;
-    padding: 100px 0 0px 0;
   }
-
-  @media(max-width: 576px) {}
 
   &__wrap {
     justify-content: center;
+    max-width: 980px;
+    width: 100%;
+    background: #fff url(img/creativeness-bg.png)no-repeat center/cover;
+    padding: 100px 0 50px 130px;
 
     @media(max-width: 992px) {
-      width: 415px;
+      padding: 100px 0 50px 90px;
     }
 
     @media(max-width: 576px) {
-      width: 300px;
+      padding: 100px 15px 50px 15px;
     }
   }
 
@@ -32,13 +33,9 @@
     max-width: 415px;
     position: relative;
 
-    @media(max-width: 992px) {
-      margin: 0 auto;
-    }
+    @media(max-width: 992px) {}
 
-    @media(max-width: 576px) {
-      max-width: 300px;
-    }
+    @media(max-width: 576px) {}
 
     &:after {
       content: '';
@@ -47,10 +44,14 @@
       background: url(img/boy-creativeness.png)no-repeat center/cover;
       width: 252px;
       height: 557px;
-      top: -58px;
+      top: -47px;
       right: -313px;
 
       @media(max-width: 992px) {
+        right: -249px;
+      }
+
+      @media(max-width: 768px) {
         display: none;
       }
     }

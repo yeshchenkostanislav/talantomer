@@ -9,5 +9,9 @@
  })
 
  mySwiper.on('slideChange', function () {
-   $("body").scrollTop('-10px');
+   $(window).scrollTop(0);
  });
+
+ let BK1,
+   BK2,
+   BK3;

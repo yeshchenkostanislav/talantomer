@@ -47,7 +47,7 @@
     }
 
     @media(max-width: 576px) {
-      padding: 20px 20px 40px 20px;
+      padding: 70px 20px 60px 20px;
     }
   }
 
@@ -127,6 +127,10 @@
   &__play-example-img {
     margin: 0 75px 0 0;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @media(max-width: 576px) {
       display: flex;
       align-items: center;
@@ -205,6 +209,7 @@
 
     &:hover {
       background: darken(#f02e8d, 10%);
+      cursor: pointer;
     }
   }
 }
