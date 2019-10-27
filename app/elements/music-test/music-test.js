@@ -104,6 +104,7 @@ function soundClick_9() {
 }
 
 let ArrZC = [];
+let ZC = 0;
 
 // собираем баллы за тест
 $(".music-test__btn").click(function () {
@@ -112,3 +113,9 @@ $(".music-test__btn").click(function () {
   });
   console.log(ArrZC);
 })
+
+
+
+$.each(ArrZC, function (ind, val) {
+  ZC += +val;
+});
