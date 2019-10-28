@@ -14,7 +14,6 @@ $('document').ready(function () {
     });
 
     $('.ability-graph__list-box_AC .ability-graph__list-box-item').each(function (i, elem) {
-
       if (i < AktCpSten) {
         $(elem).css({
           'background-color': '#ceff00'
@@ -314,7 +313,7 @@ $('document').ready(function () {
       TvEnSten = 8;
     } else if (TvEn > 14 && TvEn < 19) {
       TvEnSten = 9;
-    } else if (TvEn > 18 && TvEn < 21) {
+    } else if (TvEn > 18) {
       TvEnSten = 10;
     };
 
@@ -336,7 +335,7 @@ $('document').ready(function () {
       AktCpSten = 8;
     } else if (AktCp > 12 && AktCp < 18) {
       AktCpSten = 9;
-    } else if (AktCp > 17 && AktCp < 21) {
+    } else if (AktCp > 17) {
       AktCpSten = 10;
     };
 
@@ -380,7 +379,7 @@ $('document').ready(function () {
       MyzCpSten = 8;
     } else if (MyzCp > 13 && MyzCp < 18) {
       MyzCpSten = 9;
-    } else if (MyzCp > 17 && MyzCp < 21) {
+    } else if (MyzCp > 17) {
       MyzCpSten = 10;
     };
 
@@ -402,7 +401,7 @@ $('document').ready(function () {
       TvGkSten = 8;
     } else if (TvGk > 14 && TvGk < 19) {
       TvGkSten = 9;
-    } else if (TvGk > 18 && TvGk < 21) {
+    } else if (TvGk > 18) {
       TvGkSten = 10;
     };
 

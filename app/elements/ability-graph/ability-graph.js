@@ -11,7 +11,6 @@ $('.conclusion__btn').click(function () {
   });
 
   $('.ability-graph__list-box_AC .ability-graph__list-box-item').each(function (i, elem) {
-
     if (i < AktCpSten) {
       $(elem).css({
         'background-color': '#ceff00'
