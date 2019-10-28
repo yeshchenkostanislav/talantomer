@@ -58,17 +58,17 @@ $(".interview-two__btn").click(function () {
     TvEnSten = 2;
   } else if (TvEn == 3 || TvEn == 4) {
     TvEnSten = 3;
-  } else if (TvEn == 5 || TvEn == 6) {
+  } else if (TvEn == 5) {
     TvEnSten = 4;
   } else if (TvEn == 6 || TvEn == 7) {
     TvEnSten = 5;
-  } else if (TvEn == 8 || TvEn == 9) {
+  } else if (TvEn == 8) {
     TvEnSten = 6;
   } else if (TvEn == 9 || TvEn == 10) {
     TvEnSten = 7;
   } else if (TvEn > 10 && TvEn < 15) {
     TvEnSten = 8;
-  } else if (TvEn > 13 && TvEn < 19) {
+  } else if (TvEn > 14 && TvEn < 19) {
     TvEnSten = 9;
   } else if (TvEn > 18 && TvEn < 21) {
     TvEnSten = 10;
@@ -80,11 +80,11 @@ $(".interview-two__btn").click(function () {
     AktCpSten = 2;
   } else if (AktCp == 3 || AktCp == 4) {
     AktCpSten = 3;
-  } else if (AktCp == 5 || AktCp == 6) {
+  } else if (AktCp == 5) {
     AktCpSten = 4;
   } else if (AktCp == 6 || AktCp == 7) {
     AktCpSten = 5;
-  } else if (AktCp == 8 || AktCp == 9) {
+  } else if (AktCp == 8) {
     AktCpSten = 6;
   } else if (AktCp == 9 || AktCp == 10) {
     AktCpSten = 7;
@@ -103,13 +103,13 @@ $(".interview-two__btn").click(function () {
     VizKpSten = 2;
   } else if (VizKp == 3) {
     VizKpSten = 3;
-  } else if (VizKp > 3 && VizKp < 7) {
+  } else if (VizKp == 4 || VizKp == 5) {
     VizKpSten = 4;
-  } else if (VizKp > 5 && VizKp < 8) {
+  } else if (VizKp == 6 || VizKp == 7) {
     VizKpSten = 5;
-  } else if (VizKp > 7 && VizKp < 10) {
+  } else if (VizKp == 8) {
     VizKpSten = 6;
-  } else if (VizKp > 8 && VizKp < 11) {
+  } else if (VizKp == 9 || VizKp == 10) {
     VizKpSten = 7;
   } else if (VizKp > 10 && VizKp < 14) {
     VizKpSten = 8;
@@ -126,28 +126,46 @@ $(".interview-two__btn").click(function () {
     MyzCpSten = 2;
   } else if (MyzCp == 3 || MyzCp == 4) {
     AktCpSten = 3;
-  } else if (MyzCp == 5 || MyzCp == 6) {
+  } else if (MyzCp == 5) {
     AktCpSten = 4;
   } else if (MyzCp == 6 || MyzCp == 7) {
-    AktCpSten = 4;
+    AktCpSten = 5;
+  } else if (MyzCp == 8) {
+    AktCpSten = 6;
+  } else if (MyzCp == 9 || MyzCp == 10) {
+    AktCpSten = 7;
+  } else if (MyzCp > 10 && MyzCp < 14) {
+    AktCpSten = 8;
+  } else if (MyzCp > 13 && MyzCp < 18) {
+    AktCpSten = 9;
+  } else if (MyzCp > 17 && MyzCp < 21) {
+    AktCpSten = 10;
   };
 
 
   if (TvGk == 1) {
     TvGkSten = 1;
-  } else if (MyzCp == 2) {
-    MyzCpSten = 2;
-  } else if (MyzCp == 3 || MyzCp == 4) {
-    AktCpSten = 3;
-  } else if (MyzCp == 5 || MyzCp == 6) {
-    AktCpSten = 4;
-  } else if (MyzCp == 6 || MyzCp == 7) {
-    AktCpSten = 4;
+  } else if (TvGk == 2) {
+    TvGkSten = 2;
+  } else if (TvGk == 3 || TvGk == 4) {
+    TvGkSten = 3;
+  } else if (TvGk == 5) {
+    TvGkSten = 4;
+  } else if (TvGk == 6 || TvGk == 7) {
+    TvGkSten = 5;
+  } else if (MyzCp == 8) {
+    TvGkSten = 6;
+  } else if (TvGk == 9 || TvGk == 10) {
+    TvGkSten = 7;
+  } else if (TvGk > 10 && TvGk < 15) {
+    TvGkSten = 8;
+  } else if (TvGk > 14 && TvGk < 19) {
+    TvGkSten = 9;
+  } else if (TvGk > 18 && TvGk < 21) {
+    TvGkSten = 10;
   };
 
   TT = Math.ceil((TvEnSten + TvEnSten + VizKpSten + MyzCpSten + TvGkSten) / 5);
-
-  TT = 9;
 
   if ($(window).width() < 577) {
 
