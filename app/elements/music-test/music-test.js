@@ -20,88 +20,63 @@ $('.music-test__list-item_three .music-test__checkbox').click(function () {
   $(this).prop('checked', true);
 });
 
-// первый тест
-$('.music-test__list-item_one .music-test__label_one').click(soundClick_1);
+$('.music-test__list-item_one .music-test__play-example-img').click(audioTest1);
+$('.music-test__list-item_two .music-test__play-example-img').click(audioTest2);
+$('.music-test__list-item_three .music-test__play-example-img').click(audioTest3);
 
-function soundClick_1() {
-  let audio_1 = new Audio(); // Создаём новый элемент Audio
-  audio_1.src = ''; // Указываем путь к звуку "клика"
-  audio_1.play(); // Автоматически запускаем
+// 1_Три ноты для 1 субтеста ЗС
+function audioTest1() {
+  let audioTest1 = new Audio();
+  audioTest1.src = 'http://d.zaix.ru/fkXT.mp3';
+  audioTest1.play();
+}
+// 2_Три ноты для 2 субтеста ЗС
+function audioTest2() {
+  let audioTest2 = new Audio();
+  audioTest2.src = 'http://d.zaix.ru/fkYu.mp3';
+  audioTest2.play();
+}
+// 3_Три ноты для 3 субтеста ЗС
+function audioTest3() {
+  let audioTest3 = new Audio();
+  audioTest3.src = 'http://d.zaix.ru/fkYy.mp3';
+  audioTest3.play();
 }
 
-// правильный ответ
-$('.music-test__list-item_one .music-test__play-example-img').click(soundClick_2);
-$('.music-test__list-item_one .music-test__label_two').click(soundClick_2);
+$('.music-test__list-item_one .music-test__label_one').click(note2);
+$('.music-test__list-item_one .music-test__label_two').click(note);
+$('.music-test__list-item_one .music-test__label_three').click(note3);
 
-function soundClick_2() {
-  let audio_2 = new Audio(); // Создаём новый элемент Audio
-  audio_2.src = ''; // Указываем путь к звуку "клика"
-  audio_2.play(); // Автоматически запускаем
+$('.music-test__list-item_two .music-test__label_one').click(note2);
+$('.music-test__list-item_two .music-test__label_two').click(note);
+$('.music-test__list-item_two .music-test__label_three').click(note3);
+
+$('.music-test__list-item_three .music-test__label_one').click(note);
+$('.music-test__list-item_three .music-test__label_two').click(note3);
+$('.music-test__list-item_three .music-test__label_three').click(note2);
+
+// 1_Одна нота для 1 субтеста ЗС
+function note() {
+  let note = new Audio();
+  note.src = 'http://d.zaix.ru/fkY8.mp3';
+  note.play();
 }
 
-$('.music-test__list-item_one .music-test__label_three').click(soundClick_3);
-
-function soundClick_3() {
-  let audio_3 = new Audio(); // Создаём новый элемент Audio
-  audio_3.src = ''; // Указываем путь к звуку "клика"
-  audio_3.play(); // Автоматически запускаем
+// 2_одна нота для 2 субтеста ЗС
+function note2() {
+  let note2 = new Audio();
+  note2.src = 'http://d.zaix.ru/fkYa.mp3';
+  note2.play();
 }
 
-
-// второй тест
-// правильный ответ
-$('.music-test__list-item_two .music-test__play-example-img').click(soundClick_4);
-$('.music-test__list-item_two .music-test__label_one').click(soundClick_4);
-
-function soundClick_4() {
-  let audio_4 = new Audio(); // Создаём новый элемент Audio
-  audio_4.src = ''; // Указываем путь к звуку "клика"
-  audio_4.play(); // Автоматически запускаем
-}
-
-$('.music-test__list-item_two .music-test__label_two').click(soundClick_5);
-
-function soundClick_5() {
-  let audio_5 = new Audio(); // Создаём новый элемент Audio
-  audio_5.src = ''; // Указываем путь к звуку "клика"
-  audio_5.play(); // Автоматически запускаем
-}
-
-$('.music-test__list-item_two .music-test__label_three').click(soundClick_6);
-
-function soundClick_6() {
-  let audio_6 = new Audio(); // Создаём новый элемент Audio
-  audio_6.src = ''; // Указываем путь к звуку "клика"
-  audio_6.play(); // Автоматически запускаем
+// 3_Одна нота для 3-го субтеста ЗС
+function note3() {
+  let note3 = new Audio();
+  note3.src = 'http://d.zaix.ru/fkYb.mp3';
+  note3.play();
 }
 
 
-// третий тест
-$('.music-test__list-item_three .music-test__label_one').click(soundClick_7);
-
-function soundClick_7() {
-  let audio_7 = new Audio(); // Создаём новый элемент Audio
-  audio_7.src = ''; // Указываем путь к звуку "клика"
-  audio_7.play(); // Автоматически запускаем
-}
-
-// правильный ответ
-$('.music-test__list-item_three .music-test__play-example-img').click(soundClick_8);
-$('.music-test__list-item_three .music-test__label_two').click(soundClick_8);
-
-function soundClick_8() {
-  let audio_8 = new Audio(); // Создаём новый элемент Audio
-  audio_8.src = ''; // Указываем путь к звуку "клика"
-  audio_8.play(); // Автоматически запускаем
-}
-
-$('.music-test__list-item_three .music-test__label_three').click(soundClick_9);
-
-function soundClick_9() {
-  let audio_9 = new Audio(); // Создаём новый элемент Audio
-  audio_9.src = ''; // Указываем путь к звуку "клика"
-  audio_9.play(); // Автоматически запускаем
-}
 
 let ArrZC = [];
 let ZC = 0;
@@ -111,11 +86,11 @@ $(".music-test__btn").click(function () {
   $('.music-test input:checkbox:checked').each(function (i, element) {
     ArrZC.push($(element).attr('data-ZC'));
   });
+
+  $.each(ArrZC, function (ind, val) {
+    ZC += +val;
+  });
+
   console.log(ArrZC);
+  console.log(ZC);
 })
-
-
-
-$.each(ArrZC, function (ind, val) {
-  ZC += +val;
-});

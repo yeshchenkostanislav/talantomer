@@ -26,8 +26,12 @@ $('.emotion-test__list-item_four .emotion-test__checkbox').click(function () {
   });
   $(this).prop('checked', true);
 
+});
 
-  //при клике на чекбокс в последней строке, собираются все значения
+
+$('.emotion-test__btn').click(function () {
+
+  //при клике на кнопку , собираются все значения
   $('.emotion-test input:checkbox:checked').each(function (i, element) {
     ArrAC.push($(element).attr('data-AC'));
   });
@@ -35,7 +39,11 @@ $('.emotion-test__list-item_four .emotion-test__checkbox').click(function () {
   $.each(ArrAC, function (ind, val) {
     ACsum1 += +val;
   });
-});
+
+  console.log(ArrAC);
+  console.log(ACsum1);
+
+})
 
 
 let ArrAC = [];

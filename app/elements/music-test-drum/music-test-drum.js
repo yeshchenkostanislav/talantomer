@@ -1,42 +1,29 @@
 // первый тест на чувство ритма
 
 // пример
-$('.music-test-drum__list-item_one .music-test-drum__play-example-img').click(soundClick_11);
+$('.music-test-drum__list-item_one .music-test-drum__play-example-img').click(testDrums);
+$('.music-test-drum__list-item_two .music-test-drum__play-example-img').click(testDrums2);
 
-function soundClick_11() {
-  let audio_11 = new Audio(); // Создаём новый элемент Audio
-  audio_11.src = ''; // Указываем путь к звуку "клика"
-  audio_11.play(); // Автоматически запускаем
+function testDrums() {
+  let testDrums = new Audio();
+  testDrums.src = 'http://d.zaix.ru/fm2t.mp3';
+  testDrums.play();
+}
+
+function testDrums2() {
+  let testDrums2 = new Audio();
+  testDrums2.src = 'http://d.zaix.ru/fm2u.mp3';
+  testDrums2.play();
 }
 
 // звук 
-$('.music-test-drum__list-item_one .music-test-drum__lose-beat').click(soundClick_12);
+$('.music-test-drum__list-item_one .music-test-drum__lose-beat').click(drums);
+$('.music-test-drum__list-item_two .music-test-drum__lose-beat').click(drums);
 
-function soundClick_12() {
-  let audio_12 = new Audio(); // Создаём новый элемент Audio
-  audio_12.src = ''; // Указываем путь к звуку "клика"
-  audio_12.play(); // Автоматически запускаем
-}
-
-// второй тест на чувство ритма
-
-// пример
-$('.music-test-drum__list-item_two .music-test-drum__play-example-img').click(soundClick_13);
-
-function soundClick_13() {
-  let audio_13 = new Audio(); // Создаём новый элемент Audio
-  audio_13.src = ''; // Указываем путь к звуку "клика"
-  audio_13.play(); // Автоматически запускаем
-}
-
-// звук 
-
-$('.music-test-drum__list-item_two .music-test-drum__lose-beat').click(soundClick_14);
-
-function soundClick_14() {
-  let audio_14 = new Audio(); // Создаём новый элемент Audio
-  audio_14.src = ''; // Указываем путь к звуку "клика"
-  audio_14.play(); // Автоматически запускаем
+function drums() {
+  let drums = new Audio(); // Создаём новый элемент Audio
+  drums.src = 'http://d.zaix.ru/fm2N.mp3'; // Указываем путь к звуку "клика"
+  drums.play(); // Автоматически запускаем
 }
 
 
@@ -128,5 +115,6 @@ $('.music-test-drum__btn').click(function () {
   MC = (ZC + Chp1 + Chp2) * 10 / 5;
 
   console.log(Chp2, Chp1);
+  console.log(MC);
 
 })

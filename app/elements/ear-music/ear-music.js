@@ -5,28 +5,16 @@ $('.ear-music__checkbox').click(function () {
   $(this).prop('checked', true);
 });
 
+// пример
+$('.ear-music__text-play').click(example);
 
-$('.ear-music__label_one').click(soundClick);
-$('.ear-music__play-example-img').click(soundClick);
-
-function soundClick() {
-  let audio = new Audio(); // Создаём новый элемент Audio
-  audio.src = ''; // Указываем путь к звуку "клика"
-  audio.play(); // Автоматически запускаем
+function example() {
+  let example = new Audio();
+  example.src = 'http://d.zaix.ru/fkZe.mp3';
+  example.play();
 }
 
-$('.ear-music__label_two').click(soundClick_two);
-
-function soundClick_two() {
-  let audio2 = new Audio(); // Создаём новый элемент Audio
-  audio2.src = ''; // Указываем путь к звуку "клика"
-  audio2.play(); // Автоматически запускаем
-}
-
-$('.ear-music__label_three').click(soundClick_three);
-
-function soundClick_three() {
-  let audio3 = new Audio(); // Создаём новый элемент Audio
-  audio3.src = ''; // Указываем путь к звуку "клика"
-  audio3.play(); // Автоматически запускаем
-}
+$('.ear-music__play-example-img').click(audioTest2);
+$('.ear-music__label_one').click(note);
+$('.ear-music__label_two').click(note2);
+$('.ear-music__label_three').click(note3);

@@ -1,7 +1,10 @@
+// запрещаем ввод текста
 $('.interview__answer').bind("change keyup input click", function () {
   if (this.value.match(/[^1-9]/g)) {
     this.value = this.value.replace(/[^0-9]/g, '');
   }
+
+  // ограничиваем ввод максимально до 10 числа включительно
   if (this.value > 10 || this.value == 0) this.value = this.value.slice(0, -1);
 });
 
@@ -16,6 +19,7 @@ $(".interview__btn").click(function () {
   MCm = +$('#3').val();
   TEm1 = +$('#2').val() + +$('#3').val() + +$('#4').val();
   TG1 = +$('#2').val() + +$('#5').val();
+
   console.log(ACm1, MCm, TEm1, TG1);
 
 });

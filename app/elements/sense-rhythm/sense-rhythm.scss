@@ -178,6 +178,10 @@
   }
 
   &__play {
+    &:hover {
+      cursor: pointer;
+    }
+
     @media(max-width: 576px) {
       width: 98px;
       height: 109px;

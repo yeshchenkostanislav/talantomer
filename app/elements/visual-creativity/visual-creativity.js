@@ -18,19 +18,25 @@ $('.visual-creativity__options-list_three .visual-creativity__checkbox').click(f
     $(element).prop('checked', false);
   });
   $(this).prop('checked', true);
+});
 
-  //при клике на чекбокс в последней строке, собираются все значения
+
+
+$(".visual-creativity__btn").click(function () {
+
+  //при клике на кнопку, собираются все значения
   $('.visual-creativity input:checkbox:checked').each(function (i, element) {
     ArrBK.push($(element).attr('data-BK'));
   });
 
+  $.each(ArrBK, function (ind, val) {
+    BKsum += +val;
+  });
 
-});
+  console.log(ArrBK);
+  console.log(BKsum);
 
+})
 
 let ArrBK = [];
 let BKsum = 0;
-
-$.each(ArrBK, function (ind, val) {
-  BKsum += +val;
-});

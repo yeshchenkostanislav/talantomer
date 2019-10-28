@@ -1,8 +1,9 @@
-$('.sense-rhythm__play-example-img').click(soundClick_10);
-$('.sense-rhythm__lose-beat').click(soundClick_10);
+$('.sense-rhythm__play-example-img').click(taskExample);
+$('.sense-rhythm__text-play').click(taskExample);
+$('.sense-rhythm__lose-beat').click(drums);
 
-function soundClick_10() {
-  let audio_10 = new Audio(); // Создаём новый элемент Audio
-  audio_10.src = ''; // Указываем путь к звуку "клика"
-  audio_10.play(); // Автоматически запускаем
+function taskExample() {
+  let taskExample = new Audio(); // Создаём новый элемент Audio
+  taskExample.src = 'http://d.zaix.ru/fm2q.mp3'; // Указываем путь к звуку "клика"
+  taskExample.play(); // Автоматически запускаем
 }

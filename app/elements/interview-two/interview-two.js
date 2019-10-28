@@ -1,7 +1,9 @@
+// запрещаем ввод текста
 $('.interview-two__answer').bind("change keyup input click", function () {
   if (this.value.match(/[^1-9]/g)) {
     this.value = this.value.replace(/[^0-9]/g, '');
   }
+  // ограничиваем ввод максимально до 10 числа включительно
   if (this.value > 10 || this.value == 0) this.value = this.value.slice(0, -1);
 });
 
@@ -40,17 +42,21 @@ $(".interview-two__btn").click(function () {
   TG2 = +$('#7').val() + +$('#8').val() + +$('#12').val();
 
   console.log(ACm2, BKm, TEm2, TG2);
-  console.log(ACm, MCm, TEm, BKm, TG);
+
 
   ACm = (ACm1 + ACm2) / 5;
   TEm = (TEm1 + TEm2) / 5;
   TG = (TG1 + TG2) / 5;
 
-  TvEn = Math.ceil(TE + TEm); // ТвЭн = ТЭ + ТЭм 
+  console.log(ACm, MCm, TEm, BKm, TG);
+
+  TvEn = Math.ceil(TZ + TEm); // ТвЭн = ТЭ + ТЭм , в формулах ошибка ТЭ это TZ
   AktCp = Math.ceil(ACm + AC); //  АктСп = АС + АСм 
   VizKp = Math.ceil((3 * BK + BKm) / 2); // ВизКр = (3*ВК + ВКм)/2
   MyzCp = Math.ceil((3 * MC + MCm) / 2); // МузСп = (3*МС + МСм)/2
   TvGk = Math.ceil(TG * 2); // ТвГк = ТГ*2
+
+  console.log(TvEn, AktCp, VizKp, MyzCp, TvGk);
 
   if (TvEn == 1) {
     TvEnSten = 1;
@@ -115,7 +121,7 @@ $(".interview-two__btn").click(function () {
     VizKpSten = 8;
   } else if (VizKp > 13 && VizKp < 18) {
     VizKpSten = 9;
-  } else if (VizKp > 17 && VizKp < 21) {
+  } else if (VizKp > 17) {
     VizKpSten = 10;
   };
 
@@ -125,21 +131,21 @@ $(".interview-two__btn").click(function () {
   } else if (MyzCp == 2) {
     MyzCpSten = 2;
   } else if (MyzCp == 3 || MyzCp == 4) {
-    AktCpSten = 3;
+    MyzCpSten = 3;
   } else if (MyzCp == 5) {
-    AktCpSten = 4;
+    MyzCpSten = 4;
   } else if (MyzCp == 6 || MyzCp == 7) {
-    AktCpSten = 5;
+    MyzCpSten = 5;
   } else if (MyzCp == 8) {
-    AktCpSten = 6;
+    MyzCpSten = 6;
   } else if (MyzCp == 9 || MyzCp == 10) {
-    AktCpSten = 7;
+    MyzCpSten = 7;
   } else if (MyzCp > 10 && MyzCp < 14) {
-    AktCpSten = 8;
+    MyzCpSten = 8;
   } else if (MyzCp > 13 && MyzCp < 18) {
-    AktCpSten = 9;
+    MyzCpSten = 9;
   } else if (MyzCp > 17 && MyzCp < 21) {
-    AktCpSten = 10;
+    MyzCpSten = 10;
   };
 
 
@@ -165,7 +171,10 @@ $(".interview-two__btn").click(function () {
     TvGkSten = 10;
   };
 
-  TT = Math.ceil((TvEnSten + TvEnSten + VizKpSten + MyzCpSten + TvGkSten) / 5);
+  TT = Math.ceil((TvEnSten + AktCpSten + VizKpSten + MyzCpSten + TvGkSten) / 5); // TТ = (ТвЭн стен + АктСп стен + ВизКр стен + МузСп стен + ТвГк стен)/5   округляем до целых
+
+  console.log("TvEnSten " + TvEnSten, "AktCpSten " + AktCpSten, "VizKpSten " + VizKpSten, "MyzCpSten " + MyzCpSten, "TvGkSten " + TvGkSten);
+  console.log("Расчет ТТ " + TT);
 
   if ($(window).width() < 577) {
 
