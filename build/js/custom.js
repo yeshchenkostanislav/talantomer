@@ -222,6 +222,7 @@ $('document').ready(function () {
   var mySwiper = new Swiper('.swiper-container', {
     autoHeight: true,
     centeredSlides: true,
+    touchRatio: 0,
     navigation: {
       nextEl: '.swiper-btn-next',
       prevEl: '.swiper-button-prev'
