@@ -2,6 +2,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
+  background: url('img/star.png')no-repeat center;
 
   @media(max-width: 992px) {
     height: 100%;
@@ -10,7 +11,8 @@
   &__wrap {
     max-width: 980px;
     width: 100%;
-    background: #fff url(img/creative-energy-bg.png)no-repeat center;
+    background: url(img/creative-energy-bg.png)no-repeat;
+    background-position: top right;
     padding: 90px 0 40px 120px;
     position: relative;
 
