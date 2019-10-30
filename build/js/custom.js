@@ -233,8 +233,8 @@ $('document').ready(function () {
   var mySwiper = new Swiper('.swiper-container', {
     autoHeight: true,
     centeredSlides: true,
-    touchRatio: 1,
-    loop: true,
+    touchRatio: 0,
+    //loop: true,
     navigation: {
       nextEl: '.swiper-btn-next',
       prevEl: '.swiper-button-prev'
