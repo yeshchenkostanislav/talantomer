@@ -4,17 +4,33 @@
 $('.music-test-drum__list-item_one .music-test-drum__play-example-img').click(testDrums);
 $('.music-test-drum__list-item_two .music-test-drum__play-example-img').click(testDrums2);
 
+var drumExample = $(".drum-example")[0];
+var bitbox = $(".bitbox")[0];
+
 function testDrums() {
-  let testDrums = new Audio();
-  testDrums.src = 'http://d.zaix.ru/fm2t.mp3';
-  testDrums.play();
+
+  bitbox.pause();
+
+  if (drumExample.paused) {
+    drumExample.currentTime = 0;
+    drumExample.play();
+  } else {
+    drumExample.pause();
+  }
 }
 
 function testDrums2() {
-  let testDrums2 = new Audio();
-  testDrums2.src = 'http://d.zaix.ru/fm2u.mp3';
-  testDrums2.play();
+
+  drumExample.pause();
+
+  if (bitbox.paused) {
+    bitbox.currentTime = 0;
+    bitbox.play();
+  } else {
+    bitbox.pause();
+  }
 }
+
 
 // звук 
 $('.music-test-drum__list-item_one .music-test-drum__lose-beat').click(drums);

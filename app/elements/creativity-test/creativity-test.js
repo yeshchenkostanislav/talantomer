@@ -36,11 +36,17 @@ $('.creativity-test__question-list-item_five .creativity-test__checkbox').click(
 
 $('.creativity-test__play').click(testPlay);
 
+var testPlay = $(".testPlay")[0];
 
 function testPlay() {
-  let testPlay = new Audio(); // Создаём новый элемент Audio
-  testPlay.src = 'http://d.zaix.ru/fkBy.mp3'; // Указываем путь к звуку "клика"
-  testPlay.play(); // Автоматически запускаем
+
+  if (testPlay.paused) {
+    testPlay.currentTime = 0;
+    testPlay.play();
+  } else {
+    testPlay.pause();
+  }
+
 }
 
 

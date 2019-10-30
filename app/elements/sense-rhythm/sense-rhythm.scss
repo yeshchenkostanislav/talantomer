@@ -121,6 +121,10 @@
   }
 
   &__text-play {
+    &:hover {
+      cursor: pointer;
+    }
+
     &_pink {
       color: #ee2989;
     }

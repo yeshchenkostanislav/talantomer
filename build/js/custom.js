@@ -86,10 +86,16 @@ $('document').ready(function () {
 
   $('.creativity-test__play').click(testPlay);
 
+  var testPlay = $(".testPlay")[0];
+
   function testPlay() {
-    var testPlay = new Audio(); // Создаём новый элемент Audio
-    testPlay.src = 'http://d.zaix.ru/fkBy.mp3'; // Указываем путь к звуку "клика"
-    testPlay.play(); // Автоматически запускаем
+
+    if (testPlay.paused) {
+      testPlay.currentTime = 0;
+      testPlay.play();
+    } else {
+      testPlay.pause();
+    }
   }
 
   var ArrTE = [];
@@ -163,10 +169,15 @@ $('document').ready(function () {
   // пример
   $('.ear-music__text-play').click(example);
 
+  var example = $(".example")[0];
+
   function example() {
-    var example = new Audio();
-    example.src = 'http://d.zaix.ru/fkZe.mp3';
-    example.play();
+    if (example.paused) {
+      example.currentTime = 0;
+      example.play();
+    } else {
+      example.pause();
+    }
   }
 
   $('.ear-music__play-example-img').click(audioTest2);
@@ -222,7 +233,8 @@ $('document').ready(function () {
   var mySwiper = new Swiper('.swiper-container', {
     autoHeight: true,
     centeredSlides: true,
-    touchRatio: 0,
+    touchRatio: 1,
+    loop: true,
     navigation: {
       nextEl: '.swiper-btn-next',
       prevEl: '.swiper-button-prev'
@@ -579,16 +591,31 @@ $('document').ready(function () {
   $('.music-test-drum__list-item_one .music-test-drum__play-example-img').click(testDrums);
   $('.music-test-drum__list-item_two .music-test-drum__play-example-img').click(testDrums2);
 
+  var drumExample = $(".drum-example")[0];
+  var bitbox = $(".bitbox")[0];
+
   function testDrums() {
-    var testDrums = new Audio();
-    testDrums.src = 'http://d.zaix.ru/fm2t.mp3';
-    testDrums.play();
+
+    bitbox.pause();
+
+    if (drumExample.paused) {
+      drumExample.currentTime = 0;
+      drumExample.play();
+    } else {
+      drumExample.pause();
+    }
   }
 
   function testDrums2() {
-    var testDrums2 = new Audio();
-    testDrums2.src = 'http://d.zaix.ru/fm2u.mp3';
-    testDrums2.play();
+
+    drumExample.pause();
+
+    if (bitbox.paused) {
+      bitbox.currentTime = 0;
+      bitbox.play();
+    } else {
+      bitbox.pause();
+    }
   }
 
   // звук 
@@ -715,23 +742,48 @@ $('document').ready(function () {
   $('.music-test__list-item_two .music-test__play-example-img').click(audioTest2);
   $('.music-test__list-item_three .music-test__play-example-img').click(audioTest3);
 
+  var audioTest1 = $(".audio")[0];
+  var audioTest2 = $(".audio")[1];
+  var audioTest3 = $(".audio")[2];
+
   // 1_Три ноты для 1 субтеста ЗС
   function audioTest1() {
-    var audioTest1 = new Audio();
-    audioTest1.src = 'http://d.zaix.ru/fkXT.mp3';
-    audioTest1.play();
+
+    audioTest2.pause();
+    audioTest3.pause();
+
+    if (audioTest1.paused) {
+      audioTest1.currentTime = 0;
+      audioTest1.play();
+    } else {
+      audioTest1.pause();
+    }
   }
   // 2_Три ноты для 2 субтеста ЗС
   function audioTest2() {
-    var audioTest2 = new Audio();
-    audioTest2.src = 'http://d.zaix.ru/fkYu.mp3';
-    audioTest2.play();
+
+    audioTest1.pause();
+    audioTest3.pause();
+
+    if (audioTest2.paused) {
+      audioTest2.currentTime = 0;
+      audioTest2.play();
+    } else {
+      audioTest2.pause();
+    }
   }
   // 3_Три ноты для 3 субтеста ЗС
   function audioTest3() {
-    var audioTest3 = new Audio();
-    audioTest3.src = 'http://d.zaix.ru/fkYy.mp3';
-    audioTest3.play();
+
+    audioTest1.pause();
+    audioTest2.pause();
+
+    if (audioTest3.paused) {
+      audioTest3.currentTime = 0;
+      audioTest3.play();
+    } else {
+      audioTest3.pause();
+    }
   }
 
   $('.music-test__list-item_one .music-test__label_one').click(note2);
@@ -746,25 +798,50 @@ $('document').ready(function () {
   $('.music-test__list-item_three .music-test__label_two').click(note3);
   $('.music-test__list-item_three .music-test__label_three').click(note2);
 
+  var note = $(".note")[0];
+  var note2 = $(".note")[1];
+  var note3 = $(".note")[2];
+
   // 1_Одна нота для 1 субтеста ЗС
   function note() {
-    var note = new Audio();
-    note.src = 'http://d.zaix.ru/fkY8.mp3';
-    note.play();
+
+    note2.pause();
+    note3.pause();
+
+    if (note.paused) {
+      note.currentTime = 0;
+      note.play();
+    } else {
+      note.pause();
+    }
   }
 
   // 2_одна нота для 2 субтеста ЗС
   function note2() {
-    var note2 = new Audio();
-    note2.src = 'http://d.zaix.ru/fkYa.mp3';
-    note2.play();
+
+    note.pause();
+    note3.pause();
+
+    if (note2.paused) {
+      note2.currentTime = 0;
+      note2.play();
+    } else {
+      note2.pause();
+    }
   }
 
   // 3_Одна нота для 3-го субтеста ЗС
   function note3() {
-    var note3 = new Audio();
-    note3.src = 'http://d.zaix.ru/fkYb.mp3';
-    note3.play();
+
+    note.pause();
+    note2.pause();
+
+    if (note3.paused) {
+      note3.currentTime = 0;
+      note3.play();
+    } else {
+      note3.pause();
+    }
   }
 
   var ArrZC = [];
@@ -787,10 +864,15 @@ $('document').ready(function () {
   $('.sense-rhythm__text-play').click(taskExample);
   $('.sense-rhythm__lose-beat').click(drums);
 
+  var taskExample = $(".taskExample")[0];
+
   function taskExample() {
-    var taskExample = new Audio(); // Создаём новый элемент Audio
-    taskExample.src = 'http://d.zaix.ru/fm2q.mp3'; // Указываем путь к звуку "клика"
-    taskExample.play(); // Автоматически запускаем
+    if (taskExample.paused) {
+      taskExample.currentTime = 0;
+      taskExample.play();
+    } else {
+      taskExample.pause();
+    }
   }
   //возможно выбрать только один чекбокс
   $('.visual-creativity__options-list_one .visual-creativity__checkbox').click(function () {

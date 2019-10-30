@@ -37,6 +37,7 @@ let path = {
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
+        audio: 'build/audio/',
         sprite: 'build/img/',
         fonts: 'build/fonts/',
     },
@@ -45,6 +46,7 @@ let path = {
         scss: 'app/scss/main.scss',
         js: 'app/js/custom.js',
         img: 'app/elements/**/img/*.*',
+        audio: 'app/elements/**/audio/*.*',
         icons: 'app/elements/**/icons/*.*',
         svg_icons: 'app/elements/**/svg-icons/*.svg',
         fonts: 'app/fonts/**/*.*',
@@ -70,12 +72,14 @@ let path = {
         ],
         fonts: 'app/fonts/**/*.*',
         img: 'app/elements/**/img/*.*',
+        audio: 'app/elements/**/audio/*.*',
         icons: 'app/elements/**/icons/*.*',
         svg_icons: 'app/elements/**/svg-icons/*.svg'
     },
     clear: {
         dev: 'build',
         img: 'build/img',
+        audio: 'build/audio',
         fonts: 'build/fonts'
     },
     sourcemaps: './sourcemaps'
@@ -155,6 +159,23 @@ gulp.task('img', function () {
             dirname: ''
         }))
         .pipe(gulp.dest(path.build.img))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
+gulp.task('audio', function () {
+    return gulp.src(path.src.audio)
+        .pipe(plumber({
+            errorHandler: notify.onError({
+                title: 'Error in audio',
+                message: '<%= error.message %>'
+            })
+        }))
+        .pipe(rename({
+            dirname: ''
+        }))
+        .pipe(gulp.dest(path.build.audio))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -250,7 +271,7 @@ gulp.task('clear', function () {
     clear.sync(path.clear.dev);
 });
 
-gulp.task('watch', ['clear', 'pug', 'scss', 'js', 'img', 'icons', 'svg-icons', 'fonts', 'vendor:js', 'vendor:css', 'browser-sync'], function () {
+gulp.task('watch', ['clear', 'pug', 'scss', 'js', 'img', 'audio', 'icons', 'svg-icons', 'fonts', 'vendor:js', 'vendor:css', 'browser-sync'], function () {
     config.watch = true;
     watch(path.watch.elements, function () {
         gulp.start('pug');
@@ -263,6 +284,9 @@ gulp.task('watch', ['clear', 'pug', 'scss', 'js', 'img', 'icons', 'svg-icons', '
     });
     watch(path.watch.img, function () {
         gulp.start('img');
+    });
+    watch(path.watch.audio, function () {
+        gulp.start('audio');
     });
     watch(path.watch.icons, function () {
         gulp.start('icons');

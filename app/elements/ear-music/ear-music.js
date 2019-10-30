@@ -8,10 +8,15 @@ $('.ear-music__checkbox').click(function () {
 // пример
 $('.ear-music__text-play').click(example);
 
+var example = $(".example")[0];
+
 function example() {
-  let example = new Audio();
-  example.src = 'http://d.zaix.ru/fkZe.mp3';
-  example.play();
+  if (example.paused) {
+    example.currentTime = 0;
+    example.play();
+  } else {
+    example.pause();
+  }
 }
 
 $('.ear-music__play-example-img').click(audioTest2);
