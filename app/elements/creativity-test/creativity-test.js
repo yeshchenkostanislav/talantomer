@@ -115,4 +115,8 @@ $(".creativity-test__btn").click(function () {
   console.log("Переменная BK4 " + BK4);
   console.log("Подсчет переменной BK " + BK);
 
+  if ($('.creativity-test input:checkbox:checked').length == 5) {
+    mySwiper.slideNext();
+  }
+
 })

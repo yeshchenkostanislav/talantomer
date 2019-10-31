@@ -1,6 +1,6 @@
 $('.sense-rhythm__play-example-img').click(taskExample);
 $('.sense-rhythm__text-play').click(taskExample);
-$('.sense-rhythm__lose-beat').click(drums);
+//$('.sense-rhythm__lose-beat').click(drums);
 
 var taskExample = $(".taskExample")[0];
 
@@ -12,3 +12,7 @@ function taskExample() {
     taskExample.pause();
   }
 }
+
+$('.sense-rhythm__btn').click(function () {
+  mySwiper.slideNext();
+});

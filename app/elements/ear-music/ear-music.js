@@ -20,6 +20,12 @@ function example() {
 }
 
 $('.ear-music__play-example-img').click(audioTest2);
-$('.ear-music__label_one').click(note);
-$('.ear-music__label_two').click(note2);
-$('.ear-music__label_three').click(note3);
+$('.ear-music__label_one').one('click', note);
+$('.ear-music__label_two').one('click', note2);
+$('.ear-music__label_three').one('click', note3);
+
+$('.ear-music__btn').click(function () {
+  if ($('.ear-music input:checkbox:checked').length == 1) {
+    mySwiper.slideNext();
+  }
+});

@@ -22,4 +22,15 @@ $(".interview__btn").click(function () {
 
   console.log(ACm1, MCm, TEm1, TG1);
 
+  var inp = 0;
+  $('.interview input').each(function (i, item) {
+    if ($(item).val()) {
+      inp += 1;
+    }
+  })
+
+  if (inp >= 6) {
+    mySwiper.slideNext();
+  }
+
 });

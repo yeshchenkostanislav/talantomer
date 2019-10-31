@@ -43,6 +43,10 @@ $('.emotion-test__btn').click(function () {
   console.log(ArrAC);
   console.log(ACsum1);
 
+  if ($('.emotion-test input:checkbox:checked').length == 4) {
+    mySwiper.slideNext();
+  }
+
 })
 
 

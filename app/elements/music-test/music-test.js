@@ -69,17 +69,17 @@ function audioTest3() {
   }
 }
 
-$('.music-test__list-item_one .music-test__label_one').click(note2);
-$('.music-test__list-item_one .music-test__label_two').click(note);
-$('.music-test__list-item_one .music-test__label_three').click(note3);
+$('.music-test__list-item_one .music-test__label_one').one('click', note2);
+$('.music-test__list-item_one .music-test__label_two').one('click', note);
+$('.music-test__list-item_one .music-test__label_three').one('click', note3);
 
-$('.music-test__list-item_two .music-test__label_one').click(note2);
-$('.music-test__list-item_two .music-test__label_two').click(note);
-$('.music-test__list-item_two .music-test__label_three').click(note3);
+$('.music-test__list-item_two .music-test__label_one').one('click', note2);
+$('.music-test__list-item_two .music-test__label_two').one('click', note);
+$('.music-test__list-item_two .music-test__label_three').one('click', note3);
 
-$('.music-test__list-item_three .music-test__label_one').click(note);
-$('.music-test__list-item_three .music-test__label_two').click(note3);
-$('.music-test__list-item_three .music-test__label_three').click(note2);
+$('.music-test__list-item_three .music-test__label_one').one('click', note);
+$('.music-test__list-item_three .music-test__label_two').one('click', note3);
+$('.music-test__list-item_three .music-test__label_three').one('click', note2);
 
 var note = $(".note")[0];
 var note2 = $(".note")[1];
@@ -144,4 +144,8 @@ $(".music-test__btn").click(function () {
 
   console.log(ArrZC);
   console.log(ZC);
+
+  if ($('.music-test input:checkbox:checked').length == 3) {
+    mySwiper.slideNext();
+  }
 })

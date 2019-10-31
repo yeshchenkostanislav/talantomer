@@ -47,6 +47,13 @@ $('document').ready(function () {
         });
       }
     });
+    mySwiper.slideNext();
+  });
+  $('.creative-energy__btn').click(function () {
+    mySwiper.slideNext();
+  });
+  $('.creativeness__btn').click(function () {
+    mySwiper.slideNext();
   });
   //возможно выбрать только один чекбокс
   $('.creativity-test__question-list-item_one .creativity-test__checkbox').click(function () {
@@ -158,6 +165,10 @@ $('document').ready(function () {
 
     console.log("Переменная BK4 " + BK4);
     console.log("Подсчет переменной BK " + BK);
+
+    if ($('.creativity-test input:checkbox:checked').length == 5) {
+      mySwiper.slideNext();
+    }
   });
   $('.ear-music__checkbox').click(function () {
     $('.ear-music__checkbox').each(function (i, element) {
@@ -181,9 +192,15 @@ $('document').ready(function () {
   }
 
   $('.ear-music__play-example-img').click(audioTest2);
-  $('.ear-music__label_one').click(note);
-  $('.ear-music__label_two').click(note2);
-  $('.ear-music__label_three').click(note3);
+  $('.ear-music__label_one').one('click', note);
+  $('.ear-music__label_two').one('click', note2);
+  $('.ear-music__label_three').one('click', note3);
+
+  $('.ear-music__btn').click(function () {
+    if ($('.ear-music input:checkbox:checked').length == 1) {
+      mySwiper.slideNext();
+    }
+  });
   //возможно выбрать только один чекбокс
   $('.emotion-test__list-item_one .emotion-test__checkbox').click(function () {
     $('.emotion-test__list-item_one .emotion-test__checkbox').each(function (i, element) {
@@ -226,6 +243,10 @@ $('document').ready(function () {
 
     console.log(ArrAC);
     console.log(ACsum1);
+
+    if ($('.emotion-test input:checkbox:checked').length == 4) {
+      mySwiper.slideNext();
+    }
   });
 
   var ArrAC = [];
@@ -233,10 +254,10 @@ $('document').ready(function () {
   var mySwiper = new Swiper('.swiper-container', {
     autoHeight: true,
     centeredSlides: true,
-    touchRatio: 0,
-    //loop: true,
+    touchRatio: 1,
+    loop: true,
     navigation: {
-      nextEl: '.swiper-btn-next',
+      //nextEl: '.swiper-btn-next',
       prevEl: '.swiper-button-prev'
     }
   });
@@ -560,6 +581,17 @@ $('document').ready(function () {
       });
       $('.conclusion__text').text('У Вашего ребёнка очень высокий и разносторонний творческий потенциал. Посмотрите на графике, какие именно качества у него развиты в наибольшей степени. Мы настоятельно рекомендуем серьезно подумать о дальнейшем развитии его способностей. Возможно, Ваш ребёнок способен добиться больших успехов в творческих профессиях. Для этого мы рекомендуем выбрать удобную подписку на нашу платформу, смотреть видео, зарабатывать лайки и тратить их на приобретение разнообразных творческих курсов!');
     }
+
+    var inp2 = 0;
+    $('.interview-two input').each(function (i, item) {
+      if ($(item).val()) {
+        inp2 += 1;
+      }
+    });
+
+    if (inp2 >= 6) {
+      mySwiper.slideNext();
+    }
   });
   // запрещаем ввод текста
   $('.interview__answer').bind("change keyup input click", function () {
@@ -584,6 +616,20 @@ $('document').ready(function () {
     TG1 = +$('#2').val() + +$('#5').val();
 
     console.log(ACm1, MCm, TEm1, TG1);
+
+    var inp = 0;
+    $('.interview input').each(function (i, item) {
+      if ($(item).val()) {
+        inp += 1;
+      }
+    });
+
+    if (inp >= 6) {
+      mySwiper.slideNext();
+    }
+  });
+  $('.main__btn').click(function () {
+    mySwiper.slideNext();
   });
   // первый тест на чувство ритма
 
@@ -619,8 +665,8 @@ $('document').ready(function () {
   }
 
   // звук 
-  $('.music-test-drum__list-item_one .music-test-drum__lose-beat').click(drums);
-  $('.music-test-drum__list-item_two .music-test-drum__lose-beat').click(drums);
+  /* $('.music-test-drum__list-item_one .music-test-drum__lose-beat').click(drums);
+  $('.music-test-drum__list-item_two .music-test-drum__lose-beat').click(drums); */
 
   function drums() {
     var drums = new Audio(); // Создаём новый элемент Audio
@@ -715,6 +761,10 @@ $('document').ready(function () {
 
     console.log(Chp2, Chp1);
     console.log(MC);
+
+    if (ArrClickTimes.length > 1 || ArrClickTimes2.length > 1) {
+      mySwiper.slideNext();
+    }
   });
   //возможность выбрать только один чекбокс
   $('.music-test__list-item_one .music-test__checkbox').click(function () {
@@ -786,17 +836,17 @@ $('document').ready(function () {
     }
   }
 
-  $('.music-test__list-item_one .music-test__label_one').click(note2);
-  $('.music-test__list-item_one .music-test__label_two').click(note);
-  $('.music-test__list-item_one .music-test__label_three').click(note3);
+  $('.music-test__list-item_one .music-test__label_one').one('click', note2);
+  $('.music-test__list-item_one .music-test__label_two').one('click', note);
+  $('.music-test__list-item_one .music-test__label_three').one('click', note3);
 
-  $('.music-test__list-item_two .music-test__label_one').click(note2);
-  $('.music-test__list-item_two .music-test__label_two').click(note);
-  $('.music-test__list-item_two .music-test__label_three').click(note3);
+  $('.music-test__list-item_two .music-test__label_one').one('click', note2);
+  $('.music-test__list-item_two .music-test__label_two').one('click', note);
+  $('.music-test__list-item_two .music-test__label_three').one('click', note3);
 
-  $('.music-test__list-item_three .music-test__label_one').click(note);
-  $('.music-test__list-item_three .music-test__label_two').click(note3);
-  $('.music-test__list-item_three .music-test__label_three').click(note2);
+  $('.music-test__list-item_three .music-test__label_one').one('click', note);
+  $('.music-test__list-item_three .music-test__label_two').one('click', note3);
+  $('.music-test__list-item_three .music-test__label_three').one('click', note2);
 
   var note = $(".note")[0];
   var note2 = $(".note")[1];
@@ -859,10 +909,20 @@ $('document').ready(function () {
 
     console.log(ArrZC);
     console.log(ZC);
+
+    if ($('.music-test input:checkbox:checked').length == 3) {
+      mySwiper.slideNext();
+    }
+  });
+  $('.section-one__btn').click(function () {
+    mySwiper.slideNext();
+  });
+  $('.section-two__btn').click(function () {
+    mySwiper.slideNext();
   });
   $('.sense-rhythm__play-example-img').click(taskExample);
   $('.sense-rhythm__text-play').click(taskExample);
-  $('.sense-rhythm__lose-beat').click(drums);
+  //$('.sense-rhythm__lose-beat').click(drums);
 
   var taskExample = $(".taskExample")[0];
 
@@ -874,6 +934,13 @@ $('document').ready(function () {
       taskExample.pause();
     }
   }
+
+  $('.sense-rhythm__btn').click(function () {
+    mySwiper.slideNext();
+  });
+  $('.underst-emotions__btn').click(function () {
+    mySwiper.slideNext();
+  });
   //возможно выбрать только один чекбокс
   $('.visual-creativity__options-list_one .visual-creativity__checkbox').click(function () {
     $('.visual-creativity__options-list_one .visual-creativity__checkbox').each(function (i, element) {
@@ -909,6 +976,10 @@ $('document').ready(function () {
 
     console.log(ArrBK);
     console.log(BKsum);
+
+    if ($('.visual-creativity input:checkbox:checked').length == 3) {
+      mySwiper.slideNext();
+    }
   });
 
   var ArrBK = [];

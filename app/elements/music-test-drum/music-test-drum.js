@@ -33,8 +33,8 @@ function testDrums2() {
 
 
 // звук 
-$('.music-test-drum__list-item_one .music-test-drum__lose-beat').click(drums);
-$('.music-test-drum__list-item_two .music-test-drum__lose-beat').click(drums);
+/* $('.music-test-drum__list-item_one .music-test-drum__lose-beat').click(drums);
+$('.music-test-drum__list-item_two .music-test-drum__lose-beat').click(drums); */
 
 function drums() {
   let drums = new Audio(); // Создаём новый элемент Audio
@@ -132,5 +132,9 @@ $('.music-test-drum__btn').click(function () {
 
   console.log(Chp2, Chp1);
   console.log(MC);
+
+  if (ArrClickTimes.length > 1 || ArrClickTimes2.length > 1) {
+    mySwiper.slideNext();
+  }
 
 })
