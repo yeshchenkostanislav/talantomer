@@ -427,7 +427,7 @@ $('document').ready(function () {
       TvGkSten = 4;
     } else if (TvGk == 6 || TvGk == 7) {
       TvGkSten = 5;
-    } else if (MyzCp == 8) {
+    } else if (TvGk == 8) {
       TvGkSten = 6;
     } else if (TvGk == 9 || TvGk == 10) {
       TvGkSten = 7;
