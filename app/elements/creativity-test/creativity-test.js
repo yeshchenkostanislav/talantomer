@@ -76,9 +76,9 @@ $(".creativity-test__btn").click(function () {
 
   TZ = TEsum * 10 / 5;
 
-  console.log("Массив ArrTE " + ArrTE);
-  console.log("Сумма массива ArrTE " + TEsum);
-  console.log("Подсчет переменной TZ " + TZ);
+  /*   console.log("Массив ArrTE " + ArrTE);
+    console.log("Сумма массива ArrTE " + TEsum);
+    console.log("Подсчет переменной TZ " + TZ); */
 
   // перебираем все чекбоксы и получаем аттрибут data-AC
   $('.creativity-test input:checkbox:checked').each(function (i, element) {
@@ -95,9 +95,9 @@ $(".creativity-test__btn").click(function () {
 
   AC = (ACsum1 + ACsum2 * 2) * 10 / 7;
 
-  console.log("Массив ArrAC2 " + ArrAC2);
-  console.log("Сумма массива ACsum2 " + ACsum2);
-  console.log("Подсчет переменной AC " + AC);
+  /*   console.log("Массив ArrAC2 " + ArrAC2);
+    console.log("Сумма массива ACsum2 " + ACsum2);
+    console.log("Подсчет переменной AC " + AC); */
 
 
 
@@ -112,8 +112,8 @@ $(".creativity-test__btn").click(function () {
 
   BK = (BKsum + BK4) * 10 / 4;
 
-  console.log("Переменная BK4 " + BK4);
-  console.log("Подсчет переменной BK " + BK);
+  /*   console.log("Переменная BK4 " + BK4);
+    console.log("Подсчет переменной BK " + BK); */
 
   if ($('.creativity-test input:checkbox:checked').length == 5) {
     mySwiper.slideNext();

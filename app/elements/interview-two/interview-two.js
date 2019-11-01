@@ -41,14 +41,14 @@ $(".interview-two__btn").click(function () {
   BKm = +$('#7').val();
   TG2 = +$('#7').val() + +$('#8').val() + +$('#12').val();
 
-  console.log(ACm2, BKm, TEm2, TG2);
+  /*   console.log(ACm2, BKm, TEm2, TG2); */
 
 
   ACm = (ACm1 + ACm2) / 5;
   TEm = (TEm1 + TEm2) / 5;
   TG = (TG1 + TG2) / 5;
 
-  console.log(ACm, MCm, TEm, BKm, TG);
+  /*  console.log(ACm, MCm, TEm, BKm, TG); */
 
   TvEn = Math.ceil(TZ + TEm); // ТвЭн = ТЭ + ТЭм , в формулах ошибка ТЭ это TZ
   AktCp = Math.ceil(ACm + AC); //  АктСп = АС + АСм 
@@ -56,7 +56,7 @@ $(".interview-two__btn").click(function () {
   MyzCp = Math.ceil((3 * MC + MCm) / 2); // МузСп = (3*МС + МСм)/2
   TvGk = Math.ceil(TG * 2); // ТвГк = ТГ*2
 
-  console.log(TvEn, AktCp, VizKp, MyzCp, TvGk);
+  /*  console.log(TvEn, AktCp, VizKp, MyzCp, TvGk); */
 
   if (TvEn == 1) {
     TvEnSten = 1;
@@ -173,8 +173,8 @@ $(".interview-two__btn").click(function () {
 
   TT = Math.ceil((TvEnSten + AktCpSten + VizKpSten + MyzCpSten + TvGkSten) / 5); // TТ = (ТвЭн стен + АктСп стен + ВизКр стен + МузСп стен + ТвГк стен)/5   округляем до целых
 
-  console.log("TvEnSten " + TvEnSten, "AktCpSten " + AktCpSten, "VizKpSten " + VizKpSten, "MyzCpSten " + MyzCpSten, "TvGkSten " + TvGkSten);
-  console.log("Расчет ТТ " + TT);
+  /*  console.log("TvEnSten " + TvEnSten, "AktCpSten " + AktCpSten, "VizKpSten " + VizKpSten, "MyzCpSten " + MyzCpSten, "TvGkSten " + TvGkSten);
+   console.log("Расчет ТТ " + TT); */
 
   if ($(window).width() < 577) {
 
@@ -337,7 +337,7 @@ $(".interview-two__btn").click(function () {
     });
     $('.conclusion__text').text('У Вашего ребёнка очень высокий и разносторонний творческий потенциал. Посмотрите на графике, какие именно качества у него развиты в наибольшей степени. Мы настоятельно рекомендуем серьезно подумать о дальнейшем развитии его способностей. Возможно, Ваш ребёнок способен добиться больших успехов в творческих профессиях. Для этого мы рекомендуем выбрать удобную подписку на нашу платформу, смотреть видео, зарабатывать лайки и тратить их на приобретение разнообразных творческих курсов!');
   }
-
+  // проверяем что все инпуты заполнены
   let inp2 = 0;
   $('.interview-two input').each(function (i, item) {
     if ($(item).val()) {

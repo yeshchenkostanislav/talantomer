@@ -76,7 +76,7 @@ $(".music-test-drum__list-item_one .music-test-drum__lose-beat").on('mouseup', f
   let difference = (clickTimeUp - clickTimeDown) / 1000;
   ArrClickTimes.push(difference);
 
-  console.log(ArrClickTimes);
+  /*   console.log(ArrClickTimes); */
 });
 
 // расчет нажатия второй кнопки
@@ -90,7 +90,7 @@ $(".music-test-drum__list-item_two .music-test-drum__lose-beat").on('mouseup', f
   let difference2 = (clickTimeUp2 - clickTimeDown2) / 1000;
   ArrClickTimes2.push(difference2);
 
-  console.log(ArrClickTimes2);
+  /*  console.log(ArrClickTimes2); */
 });
 
 
@@ -130,8 +130,8 @@ $('.music-test-drum__btn').click(function () {
 
   MC = (ZC + Chp1 + Chp2) * 10 / 5;
 
-  console.log(Chp2, Chp1);
-  console.log(MC);
+  /*  console.log(Chp2, Chp1);
+   console.log(MC); */
 
   if (ArrClickTimes.length > 1 || ArrClickTimes2.length > 1) {
     mySwiper.slideNext();

@@ -142,8 +142,8 @@ $(".music-test__btn").click(function () {
     ZC += +val;
   });
 
-  console.log(ArrZC);
-  console.log(ZC);
+  /*   console.log(ArrZC);
+    console.log(ZC); */
 
   if ($('.music-test input:checkbox:checked').length == 3) {
     mySwiper.slideNext();
