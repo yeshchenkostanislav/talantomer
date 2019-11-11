@@ -33,8 +33,8 @@ $(".visual-creativity__btn").click(function () {
     BKsum += +val;
   });
 
-  console.log(ArrBK);
-  console.log(BKsum);
+  /*   console.log(ArrBK);
+    console.log(BKsum); */
 
   if ($('.visual-creativity input:checkbox:checked').length == 3) {
     mySwiper.slideNext();

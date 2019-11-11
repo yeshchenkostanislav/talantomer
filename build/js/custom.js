@@ -131,9 +131,9 @@ $('document').ready(function () {
 
     TZ = TEsum * 10 / 5;
 
-    console.log("Массив ArrTE " + ArrTE);
-    console.log("Сумма массива ArrTE " + TEsum);
-    console.log("Подсчет переменной TZ " + TZ);
+    /*   console.log("Массив ArrTE " + ArrTE);
+      console.log("Сумма массива ArrTE " + TEsum);
+      console.log("Подсчет переменной TZ " + TZ); */
 
     // перебираем все чекбоксы и получаем аттрибут data-AC
     $('.creativity-test input:checkbox:checked').each(function (i, element) {
@@ -149,9 +149,9 @@ $('document').ready(function () {
 
     AC = (ACsum1 + ACsum2 * 2) * 10 / 7;
 
-    console.log("Массив ArrAC2 " + ArrAC2);
-    console.log("Сумма массива ACsum2 " + ACsum2);
-    console.log("Подсчет переменной AC " + AC);
+    /*   console.log("Массив ArrAC2 " + ArrAC2);
+      console.log("Сумма массива ACsum2 " + ACsum2);
+      console.log("Подсчет переменной AC " + AC); */
 
     // перебираем все чекбоксы и получаем аттрибут data-BK
     $('.creativity-test input:checkbox:checked').each(function (i, element) {
@@ -163,8 +163,8 @@ $('document').ready(function () {
 
     BK = (BKsum + BK4) * 10 / 4;
 
-    console.log("Переменная BK4 " + BK4);
-    console.log("Подсчет переменной BK " + BK);
+    /*   console.log("Переменная BK4 " + BK4);
+      console.log("Подсчет переменной BK " + BK); */
 
     if ($('.creativity-test input:checkbox:checked').length == 5) {
       mySwiper.slideNext();
@@ -241,8 +241,8 @@ $('document').ready(function () {
       ACsum1 += +val;
     });
 
-    console.log(ArrAC);
-    console.log(ACsum1);
+    /* console.log(ArrAC);
+    console.log(ACsum1); */
 
     if ($('.emotion-test input:checkbox:checked').length == 4) {
       mySwiper.slideNext();
@@ -313,13 +313,13 @@ $('document').ready(function () {
     BKm = +$('#7').val();
     TG2 = +$('#7').val() + +$('#8').val() + +$('#12').val();
 
-    console.log(ACm2, BKm, TEm2, TG2);
+    /*   console.log(ACm2, BKm, TEm2, TG2); */
 
     ACm = (ACm1 + ACm2) / 5;
     TEm = (TEm1 + TEm2) / 5;
     TG = (TG1 + TG2) / 5;
 
-    console.log(ACm, MCm, TEm, BKm, TG);
+    /*  console.log(ACm, MCm, TEm, BKm, TG); */
 
     TvEn = Math.ceil(TZ + TEm); // ТвЭн = ТЭ + ТЭм , в формулах ошибка ТЭ это TZ
     AktCp = Math.ceil(ACm + AC); //  АктСп = АС + АСм 
@@ -327,7 +327,7 @@ $('document').ready(function () {
     MyzCp = Math.ceil((3 * MC + MCm) / 2); // МузСп = (3*МС + МСм)/2
     TvGk = Math.ceil(TG * 2); // ТвГк = ТГ*2
 
-    console.log(TvEn, AktCp, VizKp, MyzCp, TvGk);
+    /*  console.log(TvEn, AktCp, VizKp, MyzCp, TvGk); */
 
     if (TvEn == 1) {
       TvEnSten = 1;
@@ -441,8 +441,8 @@ $('document').ready(function () {
 
     TT = Math.ceil((TvEnSten + AktCpSten + VizKpSten + MyzCpSten + TvGkSten) / 5); // TТ = (ТвЭн стен + АктСп стен + ВизКр стен + МузСп стен + ТвГк стен)/5   округляем до целых
 
-    console.log("TvEnSten " + TvEnSten, "AktCpSten " + AktCpSten, "VizKpSten " + VizKpSten, "MyzCpSten " + MyzCpSten, "TvGkSten " + TvGkSten);
-    console.log("Расчет ТТ " + TT);
+    /*  console.log("TvEnSten " + TvEnSten, "AktCpSten " + AktCpSten, "VizKpSten " + VizKpSten, "MyzCpSten " + MyzCpSten, "TvGkSten " + TvGkSten);
+     console.log("Расчет ТТ " + TT); */
 
     if ($(window).width() < 577) {
 
@@ -581,7 +581,7 @@ $('document').ready(function () {
       });
       $('.conclusion__text').text('У Вашего ребёнка очень высокий и разносторонний творческий потенциал. Посмотрите на графике, какие именно качества у него развиты в наибольшей степени. Мы настоятельно рекомендуем серьезно подумать о дальнейшем развитии его способностей. Возможно, Ваш ребёнок способен добиться больших успехов в творческих профессиях. Для этого мы рекомендуем выбрать удобную подписку на нашу платформу, смотреть видео, зарабатывать лайки и тратить их на приобретение разнообразных творческих курсов!');
     }
-
+    // проверяем что все инпуты заполнены
     var inp2 = 0;
     $('.interview-two input').each(function (i, item) {
       if ($(item).val()) {
@@ -615,7 +615,7 @@ $('document').ready(function () {
     TEm1 = +$('#2').val() + +$('#3').val() + +$('#4').val();
     TG1 = +$('#2').val() + +$('#5').val();
 
-    console.log(ACm1, MCm, TEm1, TG1);
+    /*   console.log(ACm1, MCm, TEm1, TG1); */
 
     var inp = 0;
     $('.interview input').each(function (i, item) {
@@ -707,7 +707,7 @@ $('document').ready(function () {
     var difference = (clickTimeUp - clickTimeDown) / 1000;
     ArrClickTimes.push(difference);
 
-    console.log(ArrClickTimes);
+    /*   console.log(ArrClickTimes); */
   });
 
   // расчет нажатия второй кнопки
@@ -721,7 +721,7 @@ $('document').ready(function () {
     var difference2 = (clickTimeUp2 - clickTimeDown2) / 1000;
     ArrClickTimes2.push(difference2);
 
-    console.log(ArrClickTimes2);
+    /*  console.log(ArrClickTimes2); */
   });
 
   // проводим подсчет баллов при нажатии на кнопку "Понятно"
@@ -759,8 +759,8 @@ $('document').ready(function () {
 
     MC = (ZC + Chp1 + Chp2) * 10 / 5;
 
-    console.log(Chp2, Chp1);
-    console.log(MC);
+    /*  console.log(Chp2, Chp1);
+     console.log(MC); */
 
     if (ArrClickTimes.length > 1 || ArrClickTimes2.length > 1) {
       mySwiper.slideNext();
@@ -907,8 +907,8 @@ $('document').ready(function () {
       ZC += +val;
     });
 
-    console.log(ArrZC);
-    console.log(ZC);
+    /*   console.log(ArrZC);
+      console.log(ZC); */
 
     if ($('.music-test input:checkbox:checked').length == 3) {
       mySwiper.slideNext();
@@ -974,8 +974,8 @@ $('document').ready(function () {
       BKsum += +val;
     });
 
-    console.log(ArrBK);
-    console.log(BKsum);
+    /*   console.log(ArrBK);
+      console.log(BKsum); */
 
     if ($('.visual-creativity input:checkbox:checked').length == 3) {
       mySwiper.slideNext();

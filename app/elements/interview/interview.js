@@ -20,7 +20,7 @@ $(".interview__btn").click(function () {
   TEm1 = +$('#2').val() + +$('#3').val() + +$('#4').val();
   TG1 = +$('#2').val() + +$('#5').val();
 
-  console.log(ACm1, MCm, TEm1, TG1);
+  /*   console.log(ACm1, MCm, TEm1, TG1); */
 
   var inp = 0;
   $('.interview input').each(function (i, item) {

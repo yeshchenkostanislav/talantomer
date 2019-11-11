@@ -40,8 +40,8 @@ $('.emotion-test__btn').click(function () {
     ACsum1 += +val;
   });
 
-  console.log(ArrAC);
-  console.log(ACsum1);
+  /* console.log(ArrAC);
+  console.log(ACsum1); */
 
   if ($('.emotion-test input:checkbox:checked').length == 4) {
     mySwiper.slideNext();
