@@ -178,23 +178,74 @@ $('document').ready(function () {
   });
 
   // пример
-  $('.ear-music__text-play').click(example);
+  $('.ear-music__text-play').click(proba);
+  $('.ear-music__play-example-img').click(proba);
 
-  var example = $(".example")[0];
+  var proba = $(".proba")[0];
 
-  function example() {
-    if (example.paused) {
-      example.currentTime = 0;
-      example.play();
+  function proba() {
+
+    proba.pause();
+    proba1.pause();
+    proba2.pause();
+    proba3.pause();
+
+    if (proba.paused) {
+      proba.currentTime = 0;
+      proba.play();
     } else {
-      example.pause();
+      proba.pause();
     }
   }
 
-  $('.ear-music__play-example-img').click(audioTest2);
-  $('.ear-music__label_one').one('click', note);
-  $('.ear-music__label_two').one('click', note2);
-  $('.ear-music__label_three').one('click', note3);
+  $('.ear-music__label_one').click(proba1);
+  $('.ear-music__label_two').click(proba2);
+  $('.ear-music__label_three').click(proba3);
+
+  var proba1 = $(".proba1")[0];
+
+  function proba1() {
+
+    proba2.pause();
+    proba3.pause();
+
+    if (proba1.paused) {
+      proba1.currentTime = 0;
+      proba1.play();
+    } else {
+      proba1.pause();
+    }
+  }
+
+  var proba2 = $(".proba2")[0];
+
+  function proba2() {
+
+    proba1.pause();
+    proba3.pause();
+
+    if (proba2.paused) {
+      proba2.currentTime = 0;
+      proba2.play();
+    } else {
+      proba2.pause();
+    }
+  }
+
+  var proba3 = $(".proba3")[0];
+
+  function proba3() {
+
+    proba1.pause();
+    proba2.pause();
+
+    if (proba3.paused) {
+      proba3.currentTime = 0;
+      proba3.play();
+    } else {
+      proba3.pause();
+    }
+  }
 
   $('.ear-music__btn').click(function () {
     if ($('.ear-music input:checkbox:checked').length == 1) {
@@ -788,109 +839,201 @@ $('document').ready(function () {
     $(this).prop('checked', true);
   });
 
-  $('.music-test__list-item_one .music-test__play-example-img').click(audioTest1);
-  $('.music-test__list-item_two .music-test__play-example-img').click(audioTest2);
-  $('.music-test__list-item_three .music-test__play-example-img').click(audioTest3);
+  $('.music-test__list-item_one .music-test__play-example-img').click(test1);
+  $('.music-test__list-item_two .music-test__play-example-img').click(test2);
+  $('.music-test__list-item_three .music-test__play-example-img').click(test3);
 
-  var audioTest1 = $(".audio")[0];
-  var audioTest2 = $(".audio")[1];
-  var audioTest3 = $(".audio")[2];
+  var test1 = $(".test1")[0];
+  var test2 = $(".test2")[0];
+  var test3 = $(".test3")[0];
 
   // 1_Три ноты для 1 субтеста ЗС
-  function audioTest1() {
+  function test1() {
 
-    audioTest2.pause();
-    audioTest3.pause();
+    test2.pause();
+    test3.pause();
 
-    if (audioTest1.paused) {
-      audioTest1.currentTime = 0;
-      audioTest1.play();
+    if (test1.paused) {
+      test1.currentTime = 0;
+      test1.play();
     } else {
-      audioTest1.pause();
+      test1.pause();
     }
   }
   // 2_Три ноты для 2 субтеста ЗС
-  function audioTest2() {
+  function test2() {
 
-    audioTest1.pause();
-    audioTest3.pause();
+    test1.pause();
+    test3.pause();
 
-    if (audioTest2.paused) {
-      audioTest2.currentTime = 0;
-      audioTest2.play();
+    if (test2.paused) {
+      test2.currentTime = 0;
+      test2.play();
     } else {
-      audioTest2.pause();
+      test2.pause();
     }
   }
   // 3_Три ноты для 3 субтеста ЗС
-  function audioTest3() {
+  function test3() {
 
-    audioTest1.pause();
-    audioTest2.pause();
+    test1.pause();
+    test2.pause();
 
-    if (audioTest3.paused) {
-      audioTest3.currentTime = 0;
-      audioTest3.play();
+    if (test3.paused) {
+      test3.currentTime = 0;
+      test3.play();
     } else {
-      audioTest3.pause();
+      test3.pause();
     }
   }
 
-  $('.music-test__list-item_one .music-test__label_one').one('click', note2);
-  $('.music-test__list-item_one .music-test__label_two').one('click', note);
-  $('.music-test__list-item_one .music-test__label_three').one('click', note3);
+  $('.music-test__list-item_one .music-test__label_one').one('click', test1Nota1);
+  $('.music-test__list-item_one .music-test__label_two').one('click', test1Nota2);
+  $('.music-test__list-item_one .music-test__label_three').one('click', test1Nota3);
 
-  $('.music-test__list-item_two .music-test__label_one').one('click', note2);
-  $('.music-test__list-item_two .music-test__label_two').one('click', note);
-  $('.music-test__list-item_two .music-test__label_three').one('click', note3);
-
-  $('.music-test__list-item_three .music-test__label_one').one('click', note);
-  $('.music-test__list-item_three .music-test__label_two').one('click', note3);
-  $('.music-test__list-item_three .music-test__label_three').one('click', note2);
-
-  var note = $(".note")[0];
-  var note2 = $(".note")[1];
-  var note3 = $(".note")[2];
+  var test1Nota1 = $(".test1Nota1")[0];
+  var test1Nota2 = $(".test1Nota2")[0];
+  var test1Nota3 = $(".test1Nota3")[0];
 
   // 1_Одна нота для 1 субтеста ЗС
-  function note() {
+  function test1Nota1() {
 
-    note2.pause();
-    note3.pause();
+    test1Nota2.pause();
+    test1Nota3.pause();
 
-    if (note.paused) {
-      note.currentTime = 0;
-      note.play();
+    if (test1Nota1.paused) {
+      test1Nota1.currentTime = 0;
+      test1Nota1.play();
     } else {
-      note.pause();
+      test1Nota1.pause();
+    }
+  }
+
+  // 2_одна нота для 1 субтеста ЗС
+  function test1Nota2() {
+
+    test1Nota1.pause();
+    test1Nota3.pause();
+
+    if (test1Nota2.paused) {
+      test1Nota2.currentTime = 0;
+      test1Nota2.play();
+    } else {
+      test1Nota2.pause();
+    }
+  }
+
+  // 3_Одна нота для 1-го субтеста ЗС
+  function test1Nota3() {
+
+    test1Nota1.pause();
+    test1Nota2.pause();
+
+    if (test1Nota3.paused) {
+      test1Nota3.currentTime = 0;
+      test1Nota3.play();
+    } else {
+      test1Nota3.pause();
+    }
+  }
+
+  $('.music-test__list-item_two .music-test__label_one').one('click', test2Nota1);
+  $('.music-test__list-item_two .music-test__label_two').one('click', test2Nota2);
+  $('.music-test__list-item_two .music-test__label_three').one('click', test2Nota3);
+
+  var test2Nota1 = $(".test2Nota1")[0];
+  var test2Nota2 = $(".test2Nota2")[0];
+  var test2Nota3 = $(".test2Nota3")[0];
+
+  // 1_Одна нота для 2 субтеста ЗС
+  function test2Nota1() {
+
+    test2Nota2.pause();
+    test2Nota3.pause();
+
+    if (test2Nota1.paused) {
+      test2Nota1.currentTime = 0;
+      test2Nota1.play();
+    } else {
+      test2Nota1.pause();
     }
   }
 
   // 2_одна нота для 2 субтеста ЗС
-  function note2() {
+  function test2Nota2() {
 
-    note.pause();
-    note3.pause();
+    test2Nota1.pause();
+    test2Nota3.pause();
 
-    if (note2.paused) {
-      note2.currentTime = 0;
-      note2.play();
+    if (test2Nota2.paused) {
+      test2Nota2.currentTime = 0;
+      test2Nota2.play();
     } else {
-      note2.pause();
+      test2Nota2.pause();
+    }
+  }
+
+  // 3_Одна нота для 2-го субтеста ЗС
+  function test2Nota3() {
+
+    test2Nota1.pause();
+    test2Nota2.pause();
+
+    if (test2Nota3.paused) {
+      test2Nota3.currentTime = 0;
+      test2Nota3.play();
+    } else {
+      test2Nota3.pause();
+    }
+  }
+
+  $('.music-test__list-item_three .music-test__label_one').one('click', test3Nota1);
+  $('.music-test__list-item_three .music-test__label_two').one('click', test3Nota2);
+  $('.music-test__list-item_three .music-test__label_three').one('click', test3Nota3);
+
+  var test3Nota1 = $(".test3Nota1")[0];
+  var test3Nota2 = $(".test3Nota2")[0];
+  var test3Nota3 = $(".test3Nota3")[0];
+
+  // 1_Одна нота для 3 субтеста ЗС
+  function test3Nota1() {
+
+    test3Nota2.pause();
+    test3Nota3.pause();
+
+    if (test3Nota1.paused) {
+      test3Nota1.currentTime = 0;
+      test3Nota1.play();
+    } else {
+      test3Nota1.pause();
+    }
+  }
+
+  // 2_одна нота для 3 субтеста ЗС
+  function test3Nota2() {
+
+    test3Nota1.pause();
+    test3Nota3.pause();
+
+    if (test3Nota2.paused) {
+      test3Nota2.currentTime = 0;
+      test3Nota2.play();
+    } else {
+      test3Nota2.pause();
     }
   }
 
   // 3_Одна нота для 3-го субтеста ЗС
-  function note3() {
+  function test3Nota3() {
 
-    note.pause();
-    note2.pause();
+    test3Nota1.pause();
+    test3Nota2.pause();
 
-    if (note3.paused) {
-      note3.currentTime = 0;
-      note3.play();
+    if (test3Nota3.paused) {
+      test3Nota3.currentTime = 0;
+      test3Nota3.play();
     } else {
-      note3.pause();
+      test3Nota3.pause();
     }
   }
 
